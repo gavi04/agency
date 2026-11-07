@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   COLOURS — Navy #14213D / Cream #F4EDE0 / Coral #FF6B5B
+   Values are "R G B" so Tailwind can apply opacity.
+   50% Navy · 30% Cream · 10% Coral
+   ========================================================================== */
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg: 244 237 224;          /* cream #F4EDE0 — main page background */
+    --bg-soft: 238 229 214;     /* slightly deeper cream for alt sections */
+    --surface: 255 255 255;     /* white cards / surfaces */
+    --surface-2: 244 237 224;   /* cream for inner surfaces */
+    --border: 210 200 185;      /* warm border */
+    --fg: 20 33 61;             /* navy #14213D — primary text */
+    --muted: 75 85 110;         /* softer navy for secondary text */
+    --accent: 255 107 91;       /* coral #FF6B5B — CTAs & highlights */
+    --accent-soft: 255 235 232; /* very light coral tint */
+    --coral: 255 107 91;        /* coral #FF6B5B */
+    --coral-hover: 255 85 65;   /* darker coral for hover */
+    --navy: 20 33 61;           /* navy #14213D */
+    --navy-light: 30 48 86;     /* slightly lighter navy for surfaces */
+    --cream: 244 237 224;       /* cream #F4EDE0 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-fg;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-[3px] w-4 rounded-full bg-accent;
+  }
+  .h2 {
+    @apply text-3xl font-bold leading-[1.15] sm:text-4xl lg:text-[2.75rem];
+  }
+  .lead {
+    @apply mt-4 text-base leading-relaxed text-muted sm:text-lg;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-soft;
+  }
+  .icon-chip {
+    @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl px-5 py-3 text-[15px] font-semibold transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-coral text-white shadow-soft hover:bg-coral-hover;
+  }
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-fg hover:border-fg/30 hover:bg-surface-2;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#1FAF54] text-white hover:bg-[#1a9a49];
+  }
+
+  /* Navy section variants */
+  .section-navy {
+    background-color: rgb(var(--navy));
+    color: #fff;
+  }
+  .section-cream {
+    background-color: rgb(var(--cream));
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-fg;
+  }
+  .field {
+    @apply block w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-fg placeholder:text-muted/70 transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal. Only active when JS is running (html.reveal-ready is set by components/ScrollReveal.tsx).
+   Content is fully visible without JS.
+   -------------------------------------------------------------------------- */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--d, 0ms);
+}
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* Subtle warm glow for the hero */
+.hero-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(255, 107, 91, 0.12) 0%,
+    rgba(255, 107, 91, 0.04) 40%,
+    transparent 70%
+  );
+}
+
+/* FAQ: hide default disclosure marker */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-plus { transform: rotate(90deg); opacity: 0; }
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.toast-in { animation: toast-in 0.6s ease 0.8s both; }
