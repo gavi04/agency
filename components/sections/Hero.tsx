@@ -4,114 +4,104 @@ import { hero, site } from "@/content/site";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-[#14213D] text-white pt-8 pb-16 sm:pb-24 lg:pt-14 lg:pb-24">
-      {/* Tidewell-style warm coral fluted glow behind the hero */}
+    <section id="top" className="relative overflow-hidden fluted-mesh-hero text-white pt-6 pb-12 sm:pb-16 lg:pt-10 lg:pb-16">
+      {/* Subtle organic light reflections */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/4 right-[10%] -z-0 h-[480px] w-[480px] rounded-full bg-coral/25 blur-[120px] mix-blend-screen"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-24 left-[5%] -z-0 h-[360px] w-[360px] rounded-full bg-white/[0.04] blur-[90px]"
+        className="pointer-events-none absolute top-1/3 right-[10%] -z-0 h-[360px] w-[360px] rounded-full bg-coral/25 blur-[100px] mix-blend-screen"
       />
 
       <div className="container-x relative z-10">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
           <div className="min-w-0">
             {/* Pill Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-coral/30 bg-coral/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-coral">
-              <span className="h-2 w-2 rounded-full bg-coral animate-ping" />
-              <span>For CA Firms, Finance Teams & Growing Businesses</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-coral/30 bg-coral/15 px-3 py-0.5 text-[11px] font-semibold tracking-wider text-coral">
+              <span className="h-1.5 w-1.5 rounded-full bg-coral" />
+              <span>{hero.eyebrow}</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="mt-6 text-[2.75rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[4rem]">
-              Workflows that feel like{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral via-[#ff8d7e] to-[#f4ede0]">
-                autopilot.
+            {/* Main Headline (Clean & elegant scale, not shouting) */}
+            <h1 className="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.65rem]">
+              Stop doing the same work{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral via-[#ffa194] to-cream">
+                every single day.
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+            <p className="mt-3.5 max-w-lg text-sm leading-relaxed text-white/75 sm:text-[15px]">
               {hero.subheading}
             </p>
 
-            {/* Call to Actions (Coral Button + Secondary Glass Button) */}
-            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
-              <a
-                href={site.bookingUrl}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-coral px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-coral/20 transition-all duration-200 hover:bg-coral-hover hover:scale-[1.02]"
-              >
+            {/* Call to Actions */}
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href={site.bookingUrl} className="btn-primary">
                 <span>{hero.primaryCta}</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-3.5 w-3.5" />
               </a>
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/[0.06] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-white/15 hover:border-white/30"
-              >
+              <a href="#how-it-works" className="btn-secondary">
                 {hero.secondaryCta}
               </a>
             </div>
 
             {/* Trust points */}
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-sm text-white/70">
+            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/70">
               {hero.trustPoints.map((t) => (
-                <li key={t} className="inline-flex items-center gap-2">
-                  <Check className="h-4 w-4 text-coral" strokeWidth={2.6} />
+                <li key={t} className="inline-flex items-center gap-1.5">
+                  <Check className="h-3.5 w-3.5 text-coral" strokeWidth={2.8} />
                   <span>{t}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-4 lg:mt-0">
+          <div className="mt-2 lg:mt-0">
             <DashboardMock />
           </div>
         </div>
 
-        {/* Tidewell Reference Signature Feature Strip */}
-        <div className="mt-16 sm:mt-24 border-t border-white/10 pt-8 sm:pt-10">
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        {/* Tidewell Reference Bottom Feature Strip (compact & spacious) */}
+        <div className="mt-12 sm:mt-16 border-t border-white/10 pt-6 sm:pt-8">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 text-xs">
             <div className="relative pl-1">
-              <span className="absolute -top-[33px] sm:-top-[41px] left-0 h-[3px] w-12 bg-coral rounded-full" />
-              <div className="flex items-center gap-2 text-coral">
-                <Zap className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Done-for-you</span>
+              <span className="absolute -top-[25px] sm:-top-[33px] left-0 h-[2.5px] w-10 bg-coral rounded-full" />
+              <div className="flex items-center gap-1.5 text-coral">
+                <Zap className="h-3.5 w-3.5" />
+                <span className="font-semibold uppercase tracking-wider text-white text-[11px]">Free 3-Day Trial</span>
               </div>
-              <p className="mt-1 text-xs text-white/60">Built & deployed in 7–14 days</p>
+              <p className="mt-0.5 text-white/60 text-[11px]">Try your custom chore free</p>
             </div>
 
             <div>
-              <div className="flex items-center gap-2 text-coral">
-                <WhatsApp className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">WhatsApp Driven</span>
+              <div className="flex items-center gap-1.5 text-coral">
+                <WhatsApp className="h-3.5 w-3.5" />
+                <span className="font-semibold uppercase tracking-wider text-white text-[11px]">WhatsApp Native</span>
               </div>
-              <p className="mt-1 text-xs text-white/60">Automated 1-click client uploads</p>
+              <p className="mt-0.5 text-white/60 text-[11px]">Simple replies on WhatsApp</p>
             </div>
 
             <div>
-              <div className="flex items-center gap-2 text-coral">
-                <Clock className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Compliance Alerts</span>
+              <div className="flex items-center gap-1.5 text-coral">
+                <Database className="h-3.5 w-3.5" />
+                <span className="font-semibold uppercase tracking-wider text-white text-[11px]">Accounting Synced</span>
               </div>
-              <p className="mt-1 text-xs text-white/60">GST, TDS, ITR & advance tax</p>
+              <p className="mt-0.5 text-white/60 text-[11px]">Tally, Zoho & spreadsheets</p>
             </div>
 
             <div>
-              <div className="flex items-center gap-2 text-coral">
-                <Database className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Tally & Zoho Ready</span>
+              <div className="flex items-center gap-1.5 text-coral">
+                <Clock className="h-3.5 w-3.5" />
+                <span className="font-semibold uppercase tracking-wider text-white text-[11px]">Zero Double Entry</span>
               </div>
-              <p className="mt-1 text-xs text-white/60">Zero manual re-typing into ERPs</p>
+              <p className="mt-0.5 text-white/60 text-[11px]">Enter data once. Never twice.</p>
             </div>
 
             <div>
-              <div className="flex items-center gap-2 text-coral">
-                <ShieldCheck className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Strict Privacy</span>
+              <div className="flex items-center gap-1.5 text-coral">
+                <ShieldCheck className="h-3.5 w-3.5" />
+                <span className="font-semibold uppercase tracking-wider text-white text-[11px]">NDA Protection</span>
               </div>
-              <p className="mt-1 text-xs text-white/60">Signed mutual NDA protection</p>
+              <p className="mt-0.5 text-white/60 text-[11px]">Signed before seeing files</p>
             </div>
           </div>
         </div>

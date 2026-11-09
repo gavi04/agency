@@ -3,15 +3,15 @@ import { faqs, site, whatsappUrl } from "@/content/site";
 
 export default function Faq() {
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="section bg-bg">
-      <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+    <section id="faq" aria-labelledby="faq-heading" className="section fluted-mesh-cream border-t border-line">
+      <div className="container-x grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
         <div data-reveal>
-          <p className="eyebrow">Frequently Asked</p>
-          <h2 id="faq-heading" className="h2 mt-4 text-fg">
-            Everything you need to know about our automations
+          <p className="eyebrow">Common Questions</p>
+          <h2 id="faq-heading" className="h2 mt-2 text-navy">
+            Questions owners usually ask
           </h2>
           <p className="lead">
-            Have a specific workflow or custom software question?{" "}
+            Have a question about your specific workflow?{" "}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -31,17 +31,17 @@ export default function Faq() {
           </p>
         </div>
 
-        <div data-reveal className="space-y-3.5">
+        <div data-reveal className="space-y-2.5">
           {faqs.map((f) => (
-            <details key={f.q} className="group card overflow-hidden bg-white border-line shadow-soft">
-              <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-5 text-left text-base font-semibold text-fg sm:px-6 sm:text-[17px]">
-                {f.q}
-                <span className="relative inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-soft text-coral transition-all duration-200 group-open:bg-coral group-open:text-white">
-                  <Minus className="absolute h-4 w-4" strokeWidth={2.4} />
-                  <Plus className="faq-plus absolute h-4 w-4 transition-all duration-200" strokeWidth={2.4} />
+            <details key={f.q} className="group rounded-xl border border-[#eae0d0] bg-white overflow-hidden shadow-xs">
+              <summary className="flex cursor-pointer items-center justify-between gap-3 px-4 py-3.5 text-left text-sm font-semibold text-navy sm:px-5">
+                <span>{f.q}</span>
+                <span className="relative inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-coral/15 text-coral transition-all duration-200 group-open:bg-coral group-open:text-white">
+                  <Minus className="absolute h-3.5 w-3.5" strokeWidth={2.4} />
+                  <Plus className="faq-plus absolute h-3.5 w-3.5 transition-all duration-200" strokeWidth={2.4} />
                 </span>
               </summary>
-              <p className="px-5 pb-6 text-[15px] leading-relaxed text-muted sm:px-6">{f.a}</p>
+              <p className="px-4 pb-4 pt-1 text-xs leading-relaxed text-muted sm:px-5">{f.a}</p>
             </details>
           ))}
         </div>

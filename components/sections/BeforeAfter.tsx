@@ -1,80 +1,53 @@
-import Logo from "../Logo";
-import { Check, X } from "../Icons";
-import { beforeAfter } from "@/content/site";
+import { promises, site } from "@/content/site";
+import { ArrowRight, Check } from "../Icons";
 
 export default function BeforeAfter() {
   return (
-    <section aria-labelledby="ba-heading" className="section bg-[#14213D] text-white">
+    <section aria-labelledby="promises-heading" className="section fluted-mesh-navy text-white">
       <div className="container-x">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow text-coral before:bg-coral">Before &amp; After</p>
-          <h2 id="ba-heading" className="h2 mt-4 text-white">
-            The same filing week. Minus the chaos.
+        <div data-reveal className="mx-auto max-w-xl text-center">
+          <p className="eyebrow text-coral before:bg-coral">Why Minus Zero</p>
+          <h2 id="promises-heading" className="h2 mt-2 text-white">
+            Two promises we build everything around.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
-            See how an accounting or compliance week transforms once document collection and data extraction run on autopilot.
+          <p className="lead !text-white/70">
+            No friction, no long software contracts, and no complicated tools your team will abandon.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {/* BEFORE CARD */}
-          <div
-            data-reveal
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8 backdrop-blur-sm"
-          >
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {promises.map((p, i) => (
+            <div
+              key={p.number}
+              data-reveal
+              style={{ "--d": `${i * 100}ms` } as React.CSSProperties}
+              className="relative flex flex-col justify-between rounded-2xl glass-card-dark p-6 sm:p-7 hover:border-coral/40 transition-colors"
+            >
               <div>
-                <h3 className="text-lg font-bold text-white/70">Before Minus Labs</h3>
-                <p className="mt-0.5 text-xs text-white/50">The high-friction manual cycle</p>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-coral">
+                  {p.number}
+                </span>
+                <h3 className="mt-3 text-lg font-bold text-white">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-xs sm:text-[13px] leading-relaxed text-white/75">
+                  {p.body}
+                </p>
               </div>
-              <span className="rounded-full bg-red-500/15 border border-red-500/30 px-3 py-1 text-xs font-semibold text-red-300">
-                Manual Chasing
-              </span>
-            </div>
 
-            <ol className="mt-6 space-y-4">
-              {beforeAfter.before.map((r) => (
-                <li key={r.day} className="flex items-start gap-4">
-                  <span className="w-10 shrink-0 pt-0.5 text-xs font-bold uppercase tracking-wider text-white/40">
-                    {r.day}
-                  </span>
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-red-400">
-                    <X className="h-3 w-3" strokeWidth={3} />
-                  </span>
-                  <span className="text-[14px] leading-snug text-white/70">{r.text}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          {/* AFTER CARD */}
-          <div
-            data-reveal
-            style={{ "--d": "100ms" } as React.CSSProperties}
-            className="relative rounded-3xl border-2 border-coral/60 bg-white/[0.08] p-6 sm:p-8 shadow-2xl backdrop-blur-md"
-          >
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div>
-                <h3 className="text-lg font-bold text-white">With Minus Labs</h3>
-                <p className="mt-0.5 text-xs text-coral">Structured automated workflows</p>
+              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-coral font-semibold">
+                <span>Guaranteed on every build</span>
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
               </div>
-              <Logo onDark={true} className="!text-sm" />
             </div>
+          ))}
+        </div>
 
-            <ol className="mt-6 space-y-4">
-              {beforeAfter.after.map((r) => (
-                <li key={r.day} className="flex items-start gap-4">
-                  <span className="w-10 shrink-0 pt-0.5 text-xs font-bold uppercase tracking-wider text-coral">
-                    {r.day}
-                  </span>
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-coral/20 text-coral">
-                    <Check className="h-3 w-3" strokeWidth={3} />
-                  </span>
-                  <span className="text-[14px] font-medium leading-snug text-white/95">{r.text}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
+        <div data-reveal className="mt-10 text-center">
+          <a href={site.bookingUrl} className="btn-primary">
+            <span>Get my free 3-day trial</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </a>
         </div>
       </div>
     </section>

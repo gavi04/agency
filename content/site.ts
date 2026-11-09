@@ -1,22 +1,24 @@
 /**
  * ============================================================================
- *  MINUS LABS — SITE CONTENT
+ *  MINUS ZERO — SITE CONTENT
  * ============================================================================
- *  50% Navy (#14213D) · 30% Cream (#F4EDE0) · 10% Coral (#FF6B5B)
- *  General workflow & compliance automation with Chartered Accountants &
- *  finance teams as the flagship primary audience.
+ *  Exact content mirrored from Envesty Automation Landing Page:
+ *  - Hub (all businesses: CA firms, service providers, traders, manufacturers)
+ *  - CA firms as flagship segment
+ *  - Brand: Minus Zero
+ *  - Colors: 50% Navy (#14213D), 30% Cream (#F4EDE0), 10% Coral (#FF6B5B)
  * ============================================================================
  */
 
 export const site = {
-  name: "Minus Labs",
-  tagline: "Minus the manual work.",
-  url: "https://minuslabs.in",
+  name: "Minus Zero",
+  tagline: "Stop doing the same work every single day.",
+  url: "https://minuszero.in",
   email: "gavisohal87@gmail.com",
   phoneDisplay: "+91-7717334545",
   phoneHref: "tel:+917717334545",
   whatsappNumber: "917717334545",
-  whatsappMessage: "Hi, I'd like to know more about Minus Labs automation.",
+  whatsappMessage: "Hi, I'd like to get my free 3-day trial with Minus Zero.",
   linkedin: "https://www.linkedin.com/in/",
   github: "https://github.com/",
   privacyUrl: "/privacy",
@@ -29,262 +31,266 @@ export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeUR
 )}`;
 
 export const navLinks = [
-  { label: "Services", href: "#services" },
   { label: "How it works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Your business", href: "#businesses" },
+  { label: "What we automate", href: "#what-we-automate" },
   { label: "FAQ", href: "#faq" },
 ];
 
 export const hero = {
-  eyebrow: "Workflow & Compliance Automation · Built for CA Firms & Growing Businesses",
-  headline: "Minus the chasing. Plus effortless workflows.",
+  eyebrow: "Free basic version · Ready for a 3-day trial",
+  headline: "Stop doing the same work every single day.",
   subheading:
-    "We build done-for-you automations for Chartered Accountants, finance teams, and modern professional firms. From WhatsApp document collection to compliance tracking and zero-error data extraction.",
-  primaryCta: "Book a Free Consultation",
-  secondaryCta: "Explore Workflow Demo",
+    "Whether you run a CA firm, a service business, a shop or a factory, we automate your repetitive daily chores and connect them to your accounting software. Enter data once. Never twice.",
+  primaryCta: "Get my free 3-day trial",
+  secondaryCta: "See what we automate",
   trustPoints: [
-    "Tailored for CA firms & businesses",
-    "Works with Tally, Zoho & spreadsheets",
-    "Confidential NDA on request",
+    "No technical knowledge needed",
+    "Syncs with your accounting software",
+    "Built around how you already work",
   ],
 };
 
-export const pains = [
+// Real-time automation chore tracker inside hero
+export const heroChores = [
   {
-    icon: "message",
-    text: "Endless WhatsApp & email chasing for statements, bills and KYC records",
-  },
-  {
-    icon: "calendarX",
-    text: "Stressing over GST, TDS, advance tax, and statutory filing deadlines",
-  },
-  {
-    icon: "keyboard",
-    text: "Hours lost re-typing invoices, bank statements, and entries into Tally or ERPs",
-  },
-  {
-    icon: "eyeOff",
-    text: "No central real-time view of client submissions, pending files, or approvals",
-  },
-] as const;
-
-export const services = [
-  {
-    icon: "whatsapp",
-    title: "Smart Document Collection via WhatsApp & Web",
-    body: "Clients receive scheduled, polite reminders with an instant upload link. Incoming files auto-organize into client folders with zero manual filing.",
-  },
-  {
-    icon: "bell",
-    title: "Compliance & Statutory Due Date Tracking",
-    body: "Automated alerts for GST, TDS, advance tax, ITR, and audit filings. Keeps your internal team and your clients aligned well before penalty dates.",
-  },
-  {
+    title: "Sales invoice created",
+    detail: "Sent to customer on WhatsApp",
+    badge: "Instant",
     icon: "fileText",
-    title: "Automated Bank Statement & Invoice Extraction",
-    body: "Turn PDF statements, vendor bills, and scanned receipts into structured Excel sheets or Tally-ready XML without manual data entry.",
   },
   {
-    icon: "dashboard",
-    title: "Unified Status & Client Workflow Dashboard",
-    body: "A clean command center showing what is pending, what is received, and what is filed across all partners, accounts, and team members.",
+    title: "Stock updated",
+    detail: "Reorder alert raised for 2 items",
+    badge: "Auto Sync",
+    icon: "database",
   },
   {
-    icon: "megaphone",
-    title: "Broadcasts, Advisories & Bulk Reminders",
-    body: "Send personalized compliance circulars, payment reminders, and year-end checklists to hundreds of clients in one click.",
-  },
-  {
+    title: "Synced to accounting",
+    detail: "No manual entry needed in Tally or Zoho",
+    badge: "Zero Entry",
     icon: "plug",
-    title: "Custom Integrations with Your Existing Stack",
-    body: "We connect seamlessly with tools you already rely on: Tally Prime, Zoho Books, Google Workspace, Excel, OneDrive, and WhatsApp API.",
   },
-] as const;
+  {
+    title: "Payment reminder",
+    detail: "Scheduled for 3 overdue clients · 6:00 PM",
+    badge: "Scheduled",
+    icon: "bell",
+  },
+];
 
-export const beforeAfter = {
-  before: [
-    { day: "Mon", text: "50+ follow-ups sent across WhatsApp and phone asking for bank statements." },
-    { day: "Tue", text: "Associates spending full days keying in vendor invoices by hand." },
-    { day: "Wed", text: "Checking multiple spreadsheets to deduce which clients have submitted data." },
-    { day: "Thu", text: "Panic mode: last-minute requests for missing GSTR or TDS invoices." },
-    { day: "Fri", text: "Overtime at the office. High stress, delayed filings, and burnt-out staff." },
-  ],
-  after: [
-    { day: "Mon", text: "Automated reminders sent on schedule; files land directly in tagged folders." },
-    { day: "Tue", text: "Invoices & bank statements auto-extracted into clean Tally-ready formats." },
-    { day: "Wed", text: "The team dashboard displays real-time submission status at a glance." },
-    { day: "Thu", text: "Clients were automatically alerted 7 days and 48 hours prior to due dates." },
-    { day: "Fri", text: "Filings completed ahead of schedule. Your firm scales without extra chaos." },
-  ],
-};
+// Pick your business categories
+export const businessSegments = [
+  {
+    id: "ca-firms",
+    title: "CA firms",
+    subtitle: "Tax practitioners & accounting practices",
+    featured: true,
+    points: [
+      "Client document collection on WhatsApp",
+      "GST, TDS & ITR due-date alerts",
+      "Staff work tracking & article allocation",
+      "Statements to accounting entries (Tally ready)",
+    ],
+    cta: "See automations for CA firms",
+  },
+  {
+    id: "services",
+    title: "Service providers",
+    subtitle: "Agencies, consultants, clinics, coaching",
+    featured: false,
+    points: [
+      "Recurring invoices raised automatically",
+      "Automated payment follow-ups & reminders",
+      "Client task boards & automated weekly reports",
+      "Client onboarding & contract signatures",
+    ],
+    cta: "See automations for service providers",
+  },
+  {
+    id: "traders",
+    title: "Traders & retailers",
+    subtitle: "Shops, wholesalers & distributors",
+    featured: false,
+    points: [
+      "Billing that auto-updates stock in real time",
+      "Low-stock reorder alerts sent to managers",
+      "Credit customer ledger & WhatsApp reminders",
+      "Daily sales & collection summary on phone",
+    ],
+    cta: "See automations for traders & retailers",
+  },
+  {
+    id: "manufacturers",
+    title: "Manufacturers",
+    subtitle: "Factories & production units",
+    featured: false,
+    points: [
+      "Raw material & finished goods stock logs",
+      "Biometric attendance linked directly to payroll",
+      "Production batches & dispatch registers",
+      "Vendor purchase order & GRN tracking",
+    ],
+    cta: "See automations for manufacturers",
+  },
+];
 
+// List of all automated repetitive chores
+export const choresList = [
+  "Office management",
+  "Task management",
+  "Stock management",
+  "Payroll",
+  "Attendance",
+  "Invoicing & billing",
+  "Payment reminders",
+  "Client onboarding",
+  "Document collection",
+  "Daily reports",
+  "Approvals",
+  "Data entry",
+  "+ Anything else you repeat",
+];
+
+// Two core promises
+export const promises = [
+  {
+    number: "01",
+    title: "So easy, anyone in your team can use it.",
+    body: "If you can use WhatsApp, you can use what we build. Simple screens, plain language, no training sessions, no manuals. Ease of use comes first in every decision we make.",
+  },
+  {
+    number: "02",
+    title: "Try a working version free for 3 days.",
+    body: "No long proposals, no paying upfront. We build a basic version for your actual chore and hand it to you to use for 3 days, free. Like it? We take it live.",
+  },
+];
+
+// How it works steps
 export const steps = [
   {
-    icon: "phone",
-    title: "1. 20-Minute Workflow Audit",
-    body: "We pinpoint your firm's biggest manual bottlenecks — whether document chasing, invoice processing, or compliance reminders.",
+    step: "1",
+    title: "Tell us the chore",
+    body: "A short call. Show us how you do it today: the register, the Excel sheet, the WhatsApp messages.",
   },
   {
-    icon: "layers",
-    title: "2. Custom Setup in 7-14 Days",
-    body: "We build around your existing tools (Tally, Zoho, WhatsApp, Drive) and train your team in a single hands-on session.",
+    step: "2",
+    title: "We build a basic version",
+    body: "Made for your business, not a generic template, and free for you to try.",
   },
   {
-    icon: "wrench",
-    title: "3. Fully Managed Ongoing Maintenance",
-    body: "We monitor performance, update workflows, and handle adjustments as regulations and deadlines evolve. No IT staff needed.",
+    step: "3",
+    title: "Use it free for 3 days",
+    body: "Run your real work on it. See the hours you get back before you spend a rupee.",
   },
-] as const;
+  {
+    step: "4",
+    title: "Go live & connect",
+    body: "We finish it, link it to your accounting software if you need, and keep improving it with you.",
+  },
+];
 
+// Data security & privacy
 export const security = [
   {
-    icon: "lock",
-    title: "End-to-End Encryption",
-    body: "Client financial documents and communications travel over TLS and remain encrypted in storage at all times.",
+    icon: "fileCheck",
+    title: "NDA before we start",
+    body: "We sign a confidentiality agreement before looking at your files or processes.",
   },
   {
     icon: "users",
-    title: "Strict Role-Based Access",
-    body: "Only designated partners or staff can access specific files. We never access your systems without explicit permission.",
+    title: "You control access",
+    body: "Only the people you choose can see each part of your data.",
   },
   {
     icon: "database",
-    title: "Your Data Stays on Your Infrastructure",
-    body: "Where possible, documents remain inside your own Google Drive, OneDrive, or local drives. You keep 100% control.",
+    title: "Stays in your systems",
+    body: "Wherever possible, files stay in your own Drive or software, not ours.",
   },
   {
-    icon: "fileCheck",
-    title: "Confidentiality NDA Guarantee",
-    body: "We execute mutual non-disclosure agreements before examining any client workflows or file formats.",
+    icon: "lock",
+    title: "No surprise changes",
+    body: "Nothing in your books changes without the rules you approved.",
   },
 ] as const;
 
+// FAQs
+export const faqs = [
+  {
+    q: "I'm not technical. Will I be able to use it?",
+    a: "Yes. That is the whole point. We design for the person who will use it every day, whether that's you, your accountant or your shop staff.",
+  },
+  {
+    q: "Do I have to change my accounting software?",
+    a: "No. We connect to what you already use (Tally, Zoho Books, Busy, Excel, etc.), so your accounts get updated without anyone typing the same entry twice.",
+  },
+  {
+    q: "What happens after the 3-day trial?",
+    a: "If it's saving you time, we take it live at an affordable, clear price. If it isn't, you walk away and owe nothing.",
+  },
+  {
+    q: "My process is unusual. Can you still automate it?",
+    a: "Most likely. We build around how you work, not the other way round. Tell us about it on a call and we'll be honest about what's possible.",
+  },
+];
+
+export const finalCta = {
+  headline: "Tell us one chore.",
+  headlineAccent: "Get it automated, free for 3 days.",
+  body: "Fill this in and our team will call you to understand the task. No commitment, no payment details.",
+};
+
+export const founder = {
+  name: "Imanpreet Singh Sohal",
+  role: "Founder, Minus Zero",
+  initials: "IS",
+  photo: "",
+  bio: [
+    "I am a software engineer specializing in business automation, API integrations, and accounting workflows.",
+    "I started Minus Zero to eliminate repetitive daily chores for CA firms and businesses, so teams can focus on high-value work.",
+  ],
+};
+
 export const pricing = {
-  note: "Prices are indicative and exclude GST. You will receive a fixed, transparent quote after the initial consultation.",
+  note: "Prices are transparent and agreed upon after your free 3-day trial.",
   tiers: [
     {
-      name: "Starter Workflow",
-      forWho: "Best for sole practitioners & boutique firms",
+      name: "Starter",
+      forWho: "One chore to start with",
       setup: "₹15,000",
       monthly: "₹3,000",
       featured: false,
-      features: [
-        "1 core automation (e.g. WhatsApp document reminders)",
-        "Up to 150 active clients",
-        "WhatsApp & email notification triggers",
-        "Team training & onboarding",
-        "Dedicated email support",
-      ],
-      cta: "Get Started",
+      features: ["1 core automated chore", "WhatsApp integration", "Accounting sync", "Free 3-day trial"],
+      cta: "Start free trial",
     },
     {
-      name: "Growth Practice",
-      forWho: "For established CA firms & growing businesses",
+      name: "Growth",
+      forWho: "Most popular for CA firms & businesses",
       setup: "₹35,000",
       monthly: "₹6,000",
       featured: true,
-      features: [
-        "Up to 3 custom automations",
-        "Up to 500 active clients",
-        "Real-time client status dashboard",
-        "Bank statement & invoice OCR extraction",
-        "Priority WhatsApp & phone support",
-      ],
-      cta: "Book a Free Consultation",
-    },
-    {
-      name: "Enterprise & Multi-Partner",
-      forWho: "Large CA practices, multi-branch firms & corporate finance",
-      setup: "Custom quote",
-      monthly: "Custom",
-      featured: false,
-      features: [
-        "Unlimited automated workflows",
-        "Unlimited clients & file processing",
-        "Deep Tally Prime, Zoho & ERP integrations",
-        "Multi-branch & partner hierarchy access",
-        "Dedicated solutions engineer",
-      ],
-      cta: "Talk to Us",
+      features: ["Up to 3 automated chores", "Full client/stock tracker", "Priority support", "Free 3-day trial"],
+      cta: "Start free trial",
     },
   ],
 };
 
 export const caseStudy = {
   isPlaceholder: false,
-  firm: "Apex Tax Advisors & Chartered Accountants",
-  summary:
-    "A 4-partner accounting & auditing practice managing 380+ monthly compliance clients automated document collection, GSTR reminders, and bank statement extraction.",
+  firm: "Apex Tax Advisors",
+  summary: "Automated GST document collection and invoice entry.",
   metrics: [
-    { value: "45+", label: "Hours saved per partner every month" },
-    { value: "85%", label: "Fewer manual WhatsApp follow-ups" },
-    { value: "100%", label: "On-time statutory filing compliance" },
+    { value: "30+", label: "Hours saved weekly" },
+    { value: "0", label: "Manual entries" },
   ],
 };
 
 export const testimonials = [
   {
     isPlaceholder: false,
-    quote:
-      "Collecting GST documents was our biggest nightmare every 10th of the month. Minus Labs set up automatic WhatsApp triggers with an upload link. Over 75% of our clients submit on time without a single phone call from us.",
+    quote: "We don't chase clients for documents on WhatsApp anymore. Everything syncs on its own.",
     name: "Rajesh Singhania",
-    role: "Senior Partner, Singhania & Associates (CA Firm)",
-  },
-  {
-    isPlaceholder: false,
-    quote:
-      "Beyond tax filings, we use Minus Labs for our vendor invoice processing and payment follow-ups. The data extraction saves our accountants dozens of hours each week.",
-    name: "Pooja Venkataraman",
-    role: "Head of Finance, Crestline Solutions",
+    role: "Partner, CA Firm",
   },
 ];
 
-export const founder = {
-  name: "Imanpreet Singh Sohal",
-  role: "Founder, Minus Labs",
-  initials: "IS",
-  photo: "",
-  bio: [
-    "I am a software engineer specializing in business automation, API integrations, and secure document workflows.",
-    "I started Minus Labs after witnessing how brilliant Chartered Accountants and business owners spend endless hours chasing paperwork, typing line items into software, and tracking status on messy spreadsheets.",
-    "Our mission is simple: eliminate repetitive manual friction with robust software, so professional firms can deliver higher-value advisory work.",
-  ],
-};
-
-export const faqs = [
-  {
-    q: "Who is Minus Labs built for?",
-    a: "While our flagship automations are specially tailored for Chartered Accountant (CA) firms, tax consultants, and bookkeepers in India, our document collection, compliance alerts, and invoice extraction pipelines help corporate finance teams, legal firms, and growing service businesses as well.",
-  },
-  {
-    q: "How long does setup take?",
-    a: "Most implementations go live in 1 to 2 weeks. A single workflow (like WhatsApp document reminders or basic invoice extraction) can be running in just a few days.",
-  },
-  {
-    q: "Do we or our clients need technical knowledge?",
-    a: "Not at all. Your clients only click a clean WhatsApp or web link to upload files. Your staff interacts with familiar spreadsheets, Tally-ready imports, or a simple browser dashboard. We handle all backend logic and server maintenance.",
-  },
-  {
-    q: "Does it integrate with Tally, Zoho Books, and Excel?",
-    a: "Yes. We format extracted data directly into Tally-ready XML/Excel imports and integrate with Zoho Books, Google Drive, OneDrive, and WhatsApp Business APIs. If you use custom software, we can integrate via API or file export.",
-  },
-  {
-    q: "How secure is our clients' financial and tax data?",
-    a: "Security and confidentiality are paramount. We use end-to-end TLS encryption, enforce role-based access, keep data on your existing cloud storage wherever possible, and sign a comprehensive Non-Disclosure Agreement (NDA) before any engagement.",
-  },
-  {
-    q: "What does the monthly maintenance cover?",
-    a: "It covers ongoing monitoring, API upkeep (like WhatsApp and storage connectors), handling rule or statutory date shifts, and quick technical support whenever you need an adjustment.",
-  },
-];
-
-export const finalCta = {
-  headline: "Minus the busywork.",
-  headlineAccent: "Plus more room to grow your firm.",
-  body: "Schedule a free 20-minute workflow assessment. We'll identify where your team loses the most billable hours and demonstrate how automation solves it.",
-  points: [
-    "Free 20-minute consultation (phone or video)",
-    "Clear, transparent quote with zero surprises",
-    "No disruption to your ongoing operations",
-  ],
-};

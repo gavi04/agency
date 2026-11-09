@@ -3,7 +3,6 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
-// Fonts are self-hosted by next/font at build time
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -12,25 +11,30 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-display",
 });
 
-const title = "Minus Labs | Workflow & Compliance Automation for CA Firms & Growing Businesses";
+const title = "Minus Zero | Stop Doing the Same Work Every Single Day";
 const description =
-  "Done-for-you workflow automation for Chartered Accountants, corporate finance teams, and modern businesses. Automated WhatsApp document collection, statutory compliance alerts, bank/invoice OCR extraction, and real-time client dashboards.";
+  "Whether you run a CA firm, a service business, a shop or a factory, Minus Zero automates your repetitive daily chores and connects them to your accounting software. Enter data once. Never twice.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title,
   description,
   keywords: [
+    "Minus Zero automation",
     "CA firm automation",
-    "accounting workflow automation India",
-    "business automation",
+    "business automation India",
+    "repetitive chores automation",
+    "Tally accounting sync",
     "WhatsApp document collection",
-    "GST TDS ITR reminder automation",
-    "bank statement extraction Tally",
-    "invoice OCR automation",
-    "professional services automation",
+    "billing stock automation",
+    "service business workflow",
   ],
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     url: "/",

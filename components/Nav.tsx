@@ -32,24 +32,24 @@ export default function Nav() {
       }`}
     >
       <nav
-        className="container-x flex h-[72px] items-center justify-between gap-4"
+        className="container-x flex h-[62px] items-center justify-between gap-4"
         aria-label="Main"
       >
         <a
           href="#top"
           className="rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40"
-          aria-label="Minus Labs, back to top"
+          aria-label="Minus Zero, back to top"
         >
           <Logo onDark={true} />
         </a>
 
         {/* Desktop pill navigation (Tidewell inspired) */}
-        <div className="hidden md:flex items-center gap-1 rounded-full bg-white/[0.07] border border-white/10 px-3 py-1.5 backdrop-blur-sm">
+        <div className="hidden md:flex items-center gap-1 rounded-full bg-white/[0.07] border border-white/10 px-2.5 py-1 backdrop-blur-sm">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-4 py-1.5 text-[14px] font-medium text-white/80 transition-colors hover:text-white hover:bg-white/10"
+              className="rounded-full px-3 py-1 text-xs font-medium text-white/80 transition-colors hover:text-white hover:bg-white/10"
             >
               {l.label}
             </a>
@@ -59,10 +59,10 @@ export default function Nav() {
         <div className="flex items-center gap-3">
           <a
             href={site.bookingUrl}
-            className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-coral px-5 py-2.5 text-[14px] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-coral-hover hover:shadow-md"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-coral px-4 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-coral-hover hover:scale-[1.01]"
           >
-            <span>Book a Free Call</span>
-            <ArrowRight className="h-4 w-4" />
+            <span>Start free trial</span>
+            <ArrowRight className="h-3.5 w-3.5" />
           </a>
 
           <button
@@ -102,7 +102,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-coral py-3 text-[15px] font-semibold text-white hover:bg-coral-hover"
             >
-              <span>Book a Free Call</span>
+              <span>Start free trial</span>
               <ArrowRight className="h-4 w-4" />
             </a>
           </li>

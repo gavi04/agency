@@ -1,59 +1,40 @@
-import { ArrowRight, icons } from "../Icons";
-import { site, steps } from "@/content/site";
+import { steps } from "@/content/site";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" aria-labelledby="how-heading" className="section bg-soft">
+    <section id="how-it-works" aria-labelledby="how-heading" className="section fluted-mesh-cream border-b border-line/60">
       <div className="container-x">
-        <div data-reveal className="max-w-2xl">
-          <p className="eyebrow">Implementation</p>
-          <h2 id="how-heading" className="h2 mt-4 text-fg">
-            Three steps. Zero technical headache for your team.
+        <div data-reveal className="max-w-xl">
+          <h2 id="how-heading" className="text-2xl font-bold leading-tight text-navy sm:text-3xl tracking-tight">
+            From &ldquo;this takes forever&rdquo; to &ldquo;it just happens&rdquo;.
           </h2>
-          <p className="lead">
-            We handle 100% of the engineering, integration, and training. You continue working in your familiar tools.
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            Four simple steps. You see the time saved in your own office before you spend a single rupee.
           </p>
         </div>
 
-        <ol className="relative mt-14 grid gap-6 lg:grid-cols-3">
-          {/* Connector line (desktop) */}
-          <span
-            aria-hidden="true"
-            className="absolute left-[16%] right-[16%] top-[48px] hidden h-0.5 bg-line lg:block"
-          />
-          {steps.map((s, i) => {
-            const Icon = icons[s.icon];
-            return (
-              <li
-                key={s.title}
-                data-reveal
-                style={{ "--d": `${i * 100}ms` } as React.CSSProperties}
-                className="card relative p-6 sm:p-8 bg-white border-line shadow-soft"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="icon-chip bg-accent-soft text-coral ring-8 ring-white">
-                    <Icon className="h-[22px] w-[22px]" />
-                  </span>
-                  <span className="font-display text-4xl font-extrabold text-coral/25">
-                    0{i + 1}
-                  </span>
-                </div>
-                <h3 className="mt-6 text-lg font-bold text-fg">{s.title}</h3>
-                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{s.body}</p>
-              </li>
-            );
-          })}
-        </ol>
+        <ol className="mt-8 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s, i) => (
+            <li
+              key={s.step}
+              data-reveal
+              style={{ "--d": `${i * 80}ms` } as React.CSSProperties}
+              className="relative flex flex-col justify-between rounded-2xl bg-white border border-[#eae0d0] p-5 sm:p-5 shadow-xs transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
+            >
+              <div>
+                <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-coral/15 font-display text-xs font-bold text-coral">
+                  {s.step}
+                </span>
+                <h3 className="mt-4 text-[15px] font-bold text-navy leading-snug">{s.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted">{s.body}</p>
+              </div>
 
-        <div data-reveal className="mt-12 flex justify-center">
-          <a
-            href={site.bookingUrl}
-            className="inline-flex items-center gap-2 rounded-xl bg-coral px-8 py-3.5 text-[15px] font-semibold text-white shadow-soft transition-all duration-200 hover:bg-coral-hover hover:scale-[1.02]"
-          >
-            <span>Book a Free Call</span>
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+              <div className="mt-6 pt-3 border-t border-[#eae0d0] text-[10px] font-semibold text-muted/70 uppercase tracking-wider">
+                STEP 0{s.step} OF 04
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-// "Minus Labs" wordmark — the accent bar is the minus sign in coral (#FF6B5B)
+// "Minus Zero" wordmark — the accent bar is the minus sign in coral (#FF6B5B)
 export default function Logo({
   className = "",
   onDark = false,
@@ -14,7 +14,7 @@ export default function Logo({
     >
       <span aria-hidden="true" className="block h-[4px] w-[18px] rounded-full bg-coral" />
       <span>
-        Minus<span className={`font-semibold ${onDark ? "text-white/70" : "text-muted"}`}> Labs</span>
+        Minus<span className={`font-semibold ${onDark ? "text-white/70" : "text-muted"}`}> Zero</span>
       </span>
     </span>
   );

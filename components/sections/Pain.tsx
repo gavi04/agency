@@ -1,43 +1,61 @@
-import { icons } from "../Icons";
-import { pains } from "@/content/site";
+import { Check, ArrowRight } from "../Icons";
+import { businessSegments, site } from "@/content/site";
 
 export default function Pain() {
   return (
-    <section aria-labelledby="pain-heading" className="border-y border-line bg-soft py-16 sm:py-20">
+    <section id="businesses" aria-labelledby="business-heading" className="section border-b border-line fluted-mesh-cream">
       <div className="container-x">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">The Bottlenecks</p>
-          <h2 id="pain-heading" className="mt-3 text-2xl font-bold text-fg sm:text-3xl lg:text-4xl">
-            Where your firm loses 30+ hours every single week
+        <div data-reveal className="mx-auto max-w-xl text-center">
+          <p className="eyebrow">Pick your business</p>
+          <h2 id="business-heading" className="h2 mt-2 text-navy">
+            Every business has chores that eat the day.
           </h2>
           <p className="lead">
-            Whether you&apos;re managing 400 CA clients or running a high-growth finance desk, manual chasing steals your most valuable advisory time.
+            Choose what you run to see the exact workflows we automate for businesses like yours.
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {pains.map((p, i) => {
-            const Icon = icons[p.icon];
-            return (
-              <li
-                key={p.text}
-                data-reveal
-                style={{ "--d": `${i * 70}ms` } as React.CSSProperties}
-                className="card group flex flex-col justify-between p-6 transition-all duration-300 hover:shadow-lift hover:-translate-y-1"
-              >
-                <div>
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-coral transition-colors group-hover:bg-coral group-hover:text-white">
-                    <Icon className="h-5 w-5" />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {businessSegments.map((b, i) => (
+            <div
+              key={b.id}
+              data-reveal
+              style={{ "--d": `${i * 80}ms` } as React.CSSProperties}
+              className={`flex flex-col justify-between rounded-2xl p-5 bg-white border border-[#eae0d0] transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${
+                b.featured ? "ring-1.5 ring-coral/60" : ""
+              }`}
+            >
+              <div>
+                {b.featured && (
+                  <span className="inline-block rounded-full bg-coral/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-coral mb-2">
+                    Flagship Specialty
                   </span>
-                  <p className="mt-4 text-[15px] font-semibold leading-snug text-fg">
-                    {p.text}
-                  </p>
-                </div>
-                <div className="mt-6 h-1 w-6 rounded-full bg-coral/30 group-hover:w-10 group-hover:bg-coral transition-all duration-200" />
-              </li>
-            );
-          })}
-        </ul>
+                )}
+                <h3 className="text-base font-bold text-navy">{b.title}</h3>
+                <p className="mt-0.5 text-[11px] text-muted">{b.subtitle}</p>
+
+                <ul className="mt-4 space-y-2 border-t border-line/60 pt-3.5">
+                  {b.points.map((pt) => (
+                    <li key={pt} className="flex items-start gap-2 text-xs text-fg/85 leading-snug">
+                      <Check className="h-3.5 w-3.5 shrink-0 text-coral mt-0.5" strokeWidth={2.8} />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 pt-3 border-t border-line/60">
+                <a
+                  href={site.bookingUrl}
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-coral hover:text-coral-hover transition-colors"
+                >
+                  <span>{b.cta}</span>
+                  <ArrowRight className="h-3 w-3" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
