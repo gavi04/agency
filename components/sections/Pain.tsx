@@ -22,12 +22,12 @@ export default function Pain() {
               data-reveal
               style={{ "--d": `${i * 80}ms` } as React.CSSProperties}
               className={`card flex flex-col justify-between rounded-2xl p-5 ${
-                b.featured ? "glow-border bg-navy text-cream border-transparent" : "bg-white/85 backdrop-blur-sm"
+                b.featured ? "glow-border glow-fill bg-navy text-cream border-transparent" : "bg-white/85 backdrop-blur-sm"
               }`}
             >
               <div>
                 {b.featured && (
-                  <span className="inline-block rounded-full bg-coral/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-coral mb-2">
+                  <span className="inline-block rounded-full bg-coral px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white mb-2">
                     Flagship Specialty
                   </span>
                 )}
