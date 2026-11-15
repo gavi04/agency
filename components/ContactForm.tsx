@@ -30,7 +30,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error(String(res.status));
       form.reset();
       setStatus("success");
-      setMessage("Thank you! Our team will call you within 24 hours to set up your 3-day free trial.");
+      setMessage("Thank you! We'll email you within 24 hours to book a short call and set up your free 3-day trial.");
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please message us directly on WhatsApp to claim your free trial.");
@@ -54,34 +54,51 @@ export default function ContactForm() {
       <input type="hidden" name="_subject" value="New 3-Day Free Trial Request: Minus Zero" />
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
-      <div>
-        <label htmlFor="name" className="field-label">
-          Your name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          autoComplete="name"
-          placeholder="e.g. Rahul Sharma"
-          className="field"
-        />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="name" className="field-label">
+            Your name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            autoComplete="name"
+            placeholder="e.g. Sarah Mitchell"
+            className="field"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email" className="field-label">
+            Work email
+          </label>
+          {/* Named "email" so Formspree sets it as the reply-to address */}
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            placeholder="you@company.com"
+            className="field"
+          />
+        </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="phone" className="field-label">
-            Phone / WhatsApp
+            Phone / WhatsApp <span className="font-normal text-muted">(optional)</span>
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
-            required
             inputMode="tel"
             autoComplete="tel"
-            placeholder="+91 98765 43210"
+            placeholder="With country code"
             pattern="[0-9+\-\s()]{8,}"
             className="field"
           />
@@ -135,7 +152,7 @@ export default function ContactForm() {
             </a>
           </>
         ) : (
-          "We'll call you within 24 hours. No commitment, no payment details needed."
+          "We'll reply within 24 hours. No commitment, no payment details needed."
         )}
       </p>
     </form>

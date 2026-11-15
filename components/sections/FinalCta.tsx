@@ -65,7 +65,7 @@ export default function FinalCta() {
             >
               <h3 className="text-base font-bold text-navy">Get your free 3-day trial</h3>
               <p className="mb-4 mt-0.5 text-xs text-muted">
-                Tell us the chore. We&apos;ll call to set up your working automation.
+                Tell us the chore. We&apos;ll get in touch to set up your working automation.
               </p>
               <ContactForm />
             </div>
