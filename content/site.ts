@@ -22,7 +22,7 @@ export const site = {
   github: "https://github.com/",
   privacyUrl: "/privacy",
   bookingUrl: "#contact",
-  formEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+  formEndpoint: "https://formspree.io/f/xppdpany",
 };
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
