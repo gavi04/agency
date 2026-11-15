@@ -30,7 +30,7 @@ const jsonLd = {
       knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation", "GST compliance automation", "CA firm automation", "WhatsApp business automation"],
       description:
         `${site.name} automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses in India and worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.`,
-      sameAs: [site.linkedin, site.github],
+      sameAs: [site.linkedin, site.github].filter(Boolean),
     },
     {
       "@type": "WebSite",

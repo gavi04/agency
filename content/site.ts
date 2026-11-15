@@ -20,7 +20,8 @@ export const site = {
   email: "info@accobiz.com",
   whatsappNumber: "917717334545",
   whatsappMessage: `Hi, I'd like to book my free 3-day automation trial with ${BRAND_NAME}.`,
-  linkedin: "https://www.linkedin.com/in/",
+  // Leave empty to hide the LinkedIn button; paste your profile URL to show it
+  linkedin: "",
   github: "https://github.com/",
   privacyUrl: "/privacy",
   bookingUrl: "#contact",

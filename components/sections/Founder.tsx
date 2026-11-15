@@ -41,6 +41,7 @@ export default function Founder() {
               ))}
             </div>
             <div className="mt-6 flex gap-3">
+              {site.linkedin && (
               <a
                 href={site.linkedin}
                 target="_blank"
@@ -50,6 +51,7 @@ export default function Founder() {
               >
                 <LinkedIn className="h-[18px] w-[18px]" />
               </a>
+              )}
               <a
                 href={site.github}
                 target="_blank"

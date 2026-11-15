@@ -22,6 +22,7 @@ export default function Footer() {
             {site.tagline} We automate repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses, and connect them to your accounting software and CRM.
           </p>
           <div className="mt-6 flex gap-3">
+            {site.linkedin && (
             <a
               href={site.linkedin}
               target="_blank"
@@ -31,6 +32,7 @@ export default function Footer() {
             >
               <LinkedIn className="h-4 w-4" />
             </a>
+            )}
             <a
               href={site.github}
               target="_blank"
