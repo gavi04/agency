@@ -70,7 +70,7 @@ export default function Footer() {
 
       <div className="relative z-10 border-t border-white/15 bg-[#14213D]/30 backdrop-blur-sm">
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Minus Zero. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <div className="flex gap-4">
             <a href={site.privacyUrl} className="hover:text-white transition-colors">
               Privacy policy

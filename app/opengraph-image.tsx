@@ -1,10 +1,13 @@
 import { ImageResponse } from "next/og";
+import { site } from "@/content/site";
 
-export const alt = "Minus Zero: Stop doing the same work every single day.";
+export const alt = `${site.name}: ${site.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
+  const [first, ...others] = site.name.split(" ");
+  const rest = others.join(" ");
   return new ImageResponse(
     (
       <div
@@ -23,7 +26,8 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 40, fontWeight: 800 }}>
           <div style={{ width: 44, height: 9, borderRadius: 9, background: "#FF6B5B" }} />
           <div style={{ display: "flex" }}>
-            Minus<span style={{ color: "rgba(255,255,255,0.65)", marginLeft: 12, fontWeight: 600 }}>Zero</span>
+            {first}
+            {rest && <span style={{ color: "rgba(255,255,255,0.65)", marginLeft: 12, fontWeight: 600 }}>{rest}</span>}
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

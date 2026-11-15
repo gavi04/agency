@@ -28,7 +28,7 @@ const jsonLd = {
       serviceType: "Business process automation",
       knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation"],
       description:
-        "Minus Zero automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.",
+        `${site.name} automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.`,
       sameAs: [site.linkedin, site.github],
     },
     {

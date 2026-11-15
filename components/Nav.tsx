@@ -48,7 +48,7 @@ export default function Nav() {
         <a
           href="#top"
           className="rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40"
-          aria-label="Minus Zero, back to top"
+          aria-label={`${site.name}, back to top`}
         >
           <Logo onDark={dark} />
         </a>

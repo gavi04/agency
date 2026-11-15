@@ -51,7 +51,7 @@ export default function ContactForm() {
 
   return (
     <form action={site.formEndpoint} method="POST" onSubmit={onSubmit} className="space-y-4" noValidate={false}>
-      <input type="hidden" name="_subject" value="New 3-Day Free Trial Request: Minus Zero" />
+      <input type="hidden" name="_subject" value={`New 3-Day Free Trial Request: ${site.name}`} />
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
       <div className="grid gap-4 sm:grid-cols-2">

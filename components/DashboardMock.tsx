@@ -1,4 +1,5 @@
 import { Check, Mail } from "./Icons";
+import { site } from "@/content/site";
 
 type Status = "Filed" | "Received" | "Pending";
 
@@ -18,7 +19,7 @@ export default function DashboardMock() {
   return (
     <figure className="relative ml-auto w-full max-w-[440px]">
       <figcaption className="sr-only">
-        Minus Zero automated live chore monitor showing client filing status.
+        {site.name} automated live chore monitor showing client filing status.
       </figcaption>
 
       {/* Main minimal frosted glass card (Tidewell inspired with cream tint) */}

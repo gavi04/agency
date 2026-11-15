@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-display",
 });
 
-const title = "Minus Zero | Business Process Automation Agency for Small Businesses";
+const title = `${site.name} | Business Process Automation Agency for Small Businesses`;
 const description =
   "Custom workflow automation for accounting firms, agencies, e-commerce and small businesses in the US, UK, Europe, Canada & Australia. Accounting, CRM & AI integrations. Free 3-day trial.";
 

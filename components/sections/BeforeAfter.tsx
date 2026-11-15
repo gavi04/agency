@@ -6,7 +6,7 @@ export default function BeforeAfter() {
     <section aria-labelledby="promises-heading" className="section fluted-mesh-cream text-navy">
       <div className="container-x">
         <div data-reveal className="mx-auto max-w-xl text-center">
-          <p className="eyebrow">Why Minus Zero</p>
+          <p className="eyebrow">Why {site.name}</p>
           <h2 id="promises-heading" className="h2 mt-2 text-navy">
             Two promises we build <span className="mark">everything around</span>.
           </h2>

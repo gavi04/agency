@@ -1,23 +1,25 @@
 /**
  * ============================================================================
- *  MINUS ZERO — SITE CONTENT (international edition)
+ *  SITE CONTENT (international edition)
  * ============================================================================
  *  Target markets: US, UK, Canada, Australia, UAE (English-speaking SMBs).
  *  Flagship segment: accounting & bookkeeping firms (CPAs, accountants).
- *  Brand: Minus Zero
+ *  Brand: set BRAND_NAME below. It is the only place the name is written.
  *  Colors: 50% Navy (#14213D), 30% Cream (#F4EDE0), 10% Coral (#FF6B5B)
  * ============================================================================
  */
 
+// The business name, used everywhere on the site (logo, titles, SEO, footer,
+// form subject...). Change it here only. The first word is shown bold in the logo.
+export const BRAND_NAME = "Accobiz Automation";
+
 export const site = {
-  name: "Minus Zero",
+  name: BRAND_NAME,
   tagline: "Stop doing the same work every single day.",
-  // EDIT: move to a .com (or .io/.ai) domain. A .in domain tells Google the
-  // site targets India and will hold back rankings in the US/UK/AU.
-  url: "https://minuszero.in",
-  email: "gavisohal87@gmail.com",
+  url: "https://accobiz.com",
+  email: "info@accobiz.com",
   whatsappNumber: "917717334545",
-  whatsappMessage: "Hi, I'd like to book my free 3-day automation trial with Minus Zero.",
+  whatsappMessage: `Hi, I'd like to book my free 3-day automation trial with ${BRAND_NAME}.`,
   linkedin: "https://www.linkedin.com/in/",
   github: "https://github.com/",
   privacyUrl: "/privacy",
@@ -249,12 +251,12 @@ export const finalCta = {
 
 export const founder = {
   name: "Imanpreet Singh Sohal",
-  role: "Founder, Minus Zero",
+  role: `Founder, ${BRAND_NAME}`,
   initials: "IS",
   photo: "",
   bio: [
     "I am a software engineer specializing in business automation, API integrations, and accounting workflows.",
-    "I started Minus Zero to eliminate repetitive daily chores for accounting firms and small businesses, so teams can focus on high-value work.",
+    `I started ${BRAND_NAME} to eliminate repetitive daily chores for accounting firms and small businesses, so teams can focus on high-value work.`,
   ],
 };
 

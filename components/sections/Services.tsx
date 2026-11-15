@@ -84,7 +84,7 @@ export default function Services() {
                 <div className="flex flex-col items-center">
                   <div className="h-4 w-0.5 bg-coral/40" />
                   <span className="rounded-full bg-coral px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
-                    Minus Zero Automation
+                    {site.name}
                   </span>
                   <div className="h-4 w-0.5 bg-coral/40" />
                 </div>
