@@ -24,7 +24,6 @@ const jsonLd = {
       slogan: site.tagline,
       url: site.url,
       email: site.email,
-      telephone: site.phoneHref.replace("tel:", ""),
       areaServed: [...["US", "GB", "IE", "NL", "DE", "SE", "DK", "CA", "AU", "AE", "IN"].map((c) => ({ "@type": "Country", name: c })), { "@type": "Place", name: "Europe" }],
       serviceType: "Business process automation",
       knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation"],

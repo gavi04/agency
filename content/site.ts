@@ -16,8 +16,6 @@ export const site = {
   // site targets India and will hold back rankings in the US/UK/AU.
   url: "https://minuszero.in",
   email: "gavisohal87@gmail.com",
-  phoneDisplay: "+91-7717334545",
-  phoneHref: "tel:+917717334545",
   whatsappNumber: "917717334545",
   whatsappMessage: "Hi, I'd like to book my free 3-day automation trial with Minus Zero.",
   linkedin: "https://www.linkedin.com/in/",

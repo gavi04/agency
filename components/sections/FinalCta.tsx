@@ -1,5 +1,5 @@
 import ContactForm from "../ContactForm";
-import { Check, Mail, Phone, WhatsApp } from "../Icons";
+import { Check, Mail, WhatsApp } from "../Icons";
 import { finalCta, site, whatsappUrl } from "@/content/site";
 
 export default function FinalCta() {
@@ -51,9 +51,6 @@ export default function FinalCta() {
                   Chat on WhatsApp
                 </a>
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-cream/75">
-                  <a href={site.phoneHref} className="hover:text-coral transition-colors flex items-center gap-1">
-                    <Phone className="h-3 w-3 text-coral" /> {site.phoneDisplay}
-                  </a>
                   <a href={`mailto:${site.email}`} className="hover:text-coral transition-colors flex items-center gap-1">
                     <Mail className="h-3 w-3 text-coral" /> {site.email}
                   </a>

@@ -54,11 +54,6 @@ export default function Footer() {
                 {site.email}
               </a>
             </li>
-            <li>
-              <a href={site.phoneHref} className="text-white/70 transition-colors hover:text-white">
-                {site.phoneDisplay}
-              </a>
-            </li>
           </ul>
         </div>
       </div>
