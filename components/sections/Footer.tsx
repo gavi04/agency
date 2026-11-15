@@ -4,8 +4,18 @@ import { navLinks, site } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer data-nav="dark" className="border-t border-white/10 fluted-mesh-navy text-white">
-      <div className="container-x grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer data-nav="dark" className="glass-hero relative overflow-hidden text-white">
+      {/* Same coral glow + fluted glass as the hero */}
+      <div aria-hidden="true" className="aurora">
+        <span className="a1" />
+        <span className="a2" />
+        <span className="a3" />
+        <span className="a4" />
+      </div>
+      <div aria-hidden="true" className="flutes" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#14213D]/70 to-transparent" />
+
+      <div className="container-x relative z-10 grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Logo onDark={true} />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/75">
@@ -58,7 +68,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 bg-black/25">
+      <div className="relative z-10 border-t border-white/15 bg-[#14213D]/30 backdrop-blur-sm">
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Minus Zero. All rights reserved.</p>
           <div className="flex gap-4">
