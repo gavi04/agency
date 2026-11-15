@@ -3,7 +3,7 @@ import { ArrowRight, Check } from "../Icons";
 
 export default function BeforeAfter() {
   return (
-    <section aria-labelledby="promises-heading" className="section mesh-blush text-navy">
+    <section aria-labelledby="promises-heading" className="section fluted-mesh-cream text-navy">
       <div className="container-x">
         <div data-reveal className="mx-auto max-w-xl text-center">
           <p className="eyebrow">Why Minus Zero</p>
