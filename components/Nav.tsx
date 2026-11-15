@@ -8,9 +8,19 @@ import { navLinks, site } from "@/content/site";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // true when a dark section (hero, proof, footer) sits under the bar
+  const [dark, setDark] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+      const probe = 31; // middle of the 62px bar
+      const darkUnder = Array.from(document.querySelectorAll<HTMLElement>("[data-nav='dark']")).some((el) => {
+        const r = el.getBoundingClientRect();
+        return r.top <= probe && r.bottom > probe;
+      });
+      setDark(darkUnder);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,7 +37,7 @@ export default function Nav() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#14213D]/80 backdrop-blur-xl shadow-md border-b border-cream/10"
+          ? `glass-nav ${dark ? "border-b border-cream/15" : "border-b border-navy/10"}`
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -40,16 +50,22 @@ export default function Nav() {
           className="rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40"
           aria-label="Minus Zero, back to top"
         >
-          <Logo onDark={true} />
+          <Logo onDark={dark} />
         </a>
 
         {/* Desktop pill navigation (Tidewell inspired with cream tint) */}
-        <div className="hidden md:flex items-center gap-1 rounded-full bg-cream/[0.08] border border-cream/15 px-2.5 py-1 backdrop-blur-sm">
+        <div
+          className={`hidden md:flex items-center gap-1 rounded-full border px-2.5 py-1 backdrop-blur-sm transition-colors duration-300 ${
+            dark ? "bg-cream/[0.08] border-cream/15" : "bg-white/40 border-navy/10"
+          }`}
+        >
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-1 text-xs font-medium text-cream/80 transition-colors hover:text-cream hover:bg-cream/10"
+              className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                dark ? "text-cream/80 hover:text-cream hover:bg-cream/10" : "text-navy/75 hover:text-navy hover:bg-navy/5"
+              }`}
             >
               {l.label}
             </a>
@@ -67,7 +83,9 @@ export default function Nav() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white hover:bg-white/15 md:hidden"
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-xl md:hidden ${
+              dark ? "bg-white/10 text-white hover:bg-white/15" : "bg-navy/5 text-navy hover:bg-navy/10"
+            }`}
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -82,7 +100,7 @@ export default function Nav() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="border-t border-white/10 bg-[#14213D] px-4 py-4 md:hidden"
+        className="glass-nav border-t border-white/10 bg-[#14213D]/85 px-4 py-4 md:hidden"
       >
         <ul className="flex flex-col gap-2">
           {navLinks.map((l) => (

@@ -4,7 +4,7 @@ import { navLinks, site } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 fluted-mesh-navy text-white">
+    <footer data-nav="dark" className="border-t border-white/10 fluted-mesh-navy text-white">
       <div className="container-x grid gap-10 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Logo onDark={true} />

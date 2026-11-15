@@ -18,6 +18,7 @@ export default function Hero() {
   return (
     <section
       id="top"
+      data-nav="dark"
       className="glass-hero relative -mt-[62px] flex min-h-[100svh] flex-col overflow-hidden text-cream"
     >
       {/* Moving colour light behind the glass */}

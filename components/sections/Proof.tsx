@@ -3,7 +3,7 @@ import { caseStudy, testimonials } from "@/content/site";
 
 export default function Proof() {
   return (
-    <section aria-labelledby="proof-heading" className="section bg-[#14213D] text-white">
+    <section data-nav="dark" aria-labelledby="proof-heading" className="section bg-[#14213D] text-white">
       <div className="container-x">
         <div data-reveal className="max-w-2xl">
           <p className="eyebrow text-coral before:bg-coral">Proven Impact</p>
