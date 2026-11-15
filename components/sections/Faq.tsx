@@ -3,12 +3,12 @@ import { faqs, site, whatsappUrl } from "@/content/site";
 
 export default function Faq() {
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="section fluted-mesh-cream border-t border-line">
+    <section id="faq" aria-labelledby="faq-heading" className="section mesh-blush">
       <div className="container-x grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
         <div data-reveal>
           <p className="eyebrow">Common Questions</p>
           <h2 id="faq-heading" className="h2 mt-2 text-navy">
-            Questions owners usually ask
+            Questions owners <span className="mark">usually ask</span>
           </h2>
           <p className="lead">
             Have a question about your specific workflow?{" "}
@@ -33,7 +33,7 @@ export default function Faq() {
 
         <div data-reveal className="space-y-2.5">
           {faqs.map((f) => (
-            <details key={f.q} className="group rounded-xl border border-[#eae0d0] bg-white overflow-hidden shadow-xs">
+            <details key={f.q} className="faq-item group rounded-xl border border-[#eae0d0] bg-white/90 overflow-hidden shadow-xs">
               <summary className="flex cursor-pointer items-center justify-between gap-3 px-4 py-3.5 text-left text-sm font-semibold text-navy sm:px-5">
                 <span>{f.q}</span>
                 <span className="relative inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-coral/15 text-coral transition-all duration-200 group-open:bg-coral group-open:text-white">

@@ -16,7 +16,7 @@ const badgeStyles: Record<Status, string> = {
 
 export default function DashboardMock() {
   return (
-    <figure className="relative mx-auto w-full max-w-[440px]">
+    <figure className="relative ml-auto w-full max-w-[440px]">
       <figcaption className="sr-only">
         Minus Zero automated live chore monitor showing client filing status.
       </figcaption>

@@ -6,8 +6,13 @@ export default function FinalCta() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="section fluted-mesh-cream border-t border-line">
       <div className="container-x">
-        <div className="overflow-hidden rounded-2xl fluted-mesh-navy shadow-xl border border-cream/20 text-cream">
-          <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:p-10 items-center">
+        <div className="glow-border rounded-2xl shadow-xl">
+        <div className="relative overflow-hidden rounded-2xl fluted-mesh-navy text-cream">
+          <div aria-hidden="true" className="aurora">
+            <span className="a2" />
+            <span className="a3" />
+          </div>
+          <div className="relative z-10 grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:p-10 items-center">
             <div data-reveal>
               <div className="inline-flex items-center gap-1.5 rounded-full bg-coral/20 border border-coral/30 px-3 py-0.5 text-[11px] font-semibold tracking-wider text-coral mb-3">
                 <span>Free 3-Day Working Trial</span>
@@ -68,6 +73,7 @@ export default function FinalCta() {
               <ContactForm />
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

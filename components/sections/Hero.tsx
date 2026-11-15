@@ -1,113 +1,87 @@
 import DashboardMock from "../DashboardMock";
-import { ArrowRight, Check, WhatsApp, ShieldCheck, Zap, Database, Clock } from "../Icons";
+import { ArrowRight, WhatsApp, ShieldCheck, Zap, Database, Clock } from "../Icons";
 import { hero, site } from "@/content/site";
 
+const strip = [
+  { icon: Zap, title: "Free 3-day trial", body: "on your real workflow" },
+  { icon: WhatsApp, title: "Works where you work", body: "email, Slack, Teams, WhatsApp" },
+  { icon: Database, title: "Synced to your books", body: "QuickBooks, Xero, Sage" },
+  { icon: Clock, title: "Enter data once", body: "never twice" },
+  { icon: ShieldCheck, title: "NDA & GDPR", body: "signed before we start" },
+];
+
+const d = (ms: number) => ({ "--d": `${ms}ms` }) as React.CSSProperties;
+
+// Full-bleed fluted-glass hero: blurred coral glow over navy, ribbed glass
+// overlay, oversized light headline bottom-left, glass cards top-right.
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden fluted-mesh-hero blend-to-cream text-white pt-6 pb-12 sm:pb-16 lg:pt-10 lg:pb-16">
-      {/* Subtle organic light reflections */}
+    <section
+      id="top"
+      className="glass-hero relative -mt-[62px] flex min-h-[100svh] flex-col overflow-hidden text-cream"
+    >
+      {/* Moving colour light behind the glass */}
       <div aria-hidden="true" className="aurora">
         <span className="a1" />
         <span className="a2" />
         <span className="a3" />
+        <span className="a4" />
       </div>
+      {/* Vertical ribbed glass + bottom shade for legibility */}
+      <div aria-hidden="true" className="flutes" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#14213D]/75 via-[#14213D]/25 to-transparent" />
 
-      <div className="container-x relative z-10">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+      <div className="container-x relative z-10 flex flex-1 flex-col lg:!max-w-6xl" style={{ paddingTop: 84 }}>
+        {/* Glass cards, top right */}
+        <div style={d(250)} className="rise hidden md:flex justify-end">
+          <div className="float w-full max-w-[340px]">
+            <DashboardMock />
+          </div>
+        </div>
+
+        {/* Headline block, bottom left */}
+        <div className="mt-auto grid gap-8 pb-6 pt-10 md:pt-4 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="min-w-0">
-            {/* Pill Eyebrow */}
-            <div style={{ "--d": "0ms" } as React.CSSProperties} className="rise inline-flex items-center gap-2 rounded-full border border-coral/30 bg-coral/15 px-3 py-0.5 text-[11px] font-semibold tracking-wider text-coral">
+            <div style={d(0)} className="rise inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/10 px-3 py-1 text-[11px] font-medium tracking-wide text-cream/90 backdrop-blur-md">
               <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-coral" />
               <span>{hero.eyebrow}</span>
             </div>
-
-            {/* Main Headline (Warm cream tone, fully readable) */}
-            <h1 style={{ "--d": "120ms" } as React.CSSProperties} className="rise mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-cream sm:text-4xl lg:text-[2.65rem]">
-              Stop doing the same work{" "}
-              <span className="text-shimmer">
-                every single day.
-              </span>
+            <h1
+              style={d(120)}
+              className="rise mt-4 max-w-[15ch] font-display text-[2.5rem] font-normal leading-[1.02] tracking-[-0.035em] text-cream sm:text-6xl lg:max-w-[24ch] lg:text-[clamp(3.25rem,5vw,4.5rem)]"
+            >
+              Stop doing the same work every single day.
             </h1>
-
-            {/* Subheading */}
-            <p style={{ "--d": "240ms" } as React.CSSProperties} className="rise mt-3.5 max-w-lg text-sm leading-relaxed text-cream/80 sm:text-[15px]">
+            <p style={d(240)} className="rise mt-4 max-w-md text-sm leading-relaxed text-cream/80">
               {hero.subheading}
             </p>
-
-            {/* Call to Actions */}
-            <div style={{ "--d": "360ms" } as React.CSSProperties} className="rise mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href={site.bookingUrl} className="btn-primary">
-                <span>{hero.primaryCta}</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </a>
-              <a href="#how-it-works" className="btn-secondary">
-                {hero.secondaryCta}
-              </a>
-            </div>
-
-            {/* Trust points */}
-            <ul style={{ "--d": "480ms" } as React.CSSProperties} className="rise mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-cream/75">
-              {hero.trustPoints.map((t) => (
-                <li key={t} className="inline-flex items-center gap-1.5">
-                  <Check className="h-3.5 w-3.5 text-coral" strokeWidth={2.8} />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          <div style={{ "--d": "300ms" } as React.CSSProperties} className="rise mt-2 lg:mt-0">
-            <div className="float">
-              <DashboardMock />
-            </div>
+          <div style={d(360)} className="rise flex flex-wrap items-center gap-4 lg:pb-2">
+            <a href={site.bookingUrl} className="btn-primary !rounded-full !px-6">
+              <span>{hero.primaryCta}</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </a>
+            <a href="#how-it-works" className="text-sm font-medium text-cream/90 underline-offset-4 hover:underline">
+              {hero.secondaryCta}
+            </a>
           </div>
         </div>
 
-        {/* Tidewell Reference Bottom Feature Strip (compact & spacious with cream tint) */}
-        <div className="mt-12 sm:mt-16 border-t border-cream/15 pt-6 sm:pt-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 text-xs">
-            <div className="relative pl-1">
-              <span className="absolute -top-[25px] sm:-top-[33px] left-0 h-[2.5px] w-10 bg-coral rounded-full" />
-              <div className="flex items-center gap-1.5 text-coral">
-                <Zap className="h-3.5 w-3.5" />
-                <span className="font-semibold uppercase tracking-wider text-cream text-[11px]">Free 3-Day Trial</span>
-              </div>
-              <p className="mt-0.5 text-cream/65 text-[11px]">Try your custom chore free</p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-1.5 text-coral">
-                <WhatsApp className="h-3.5 w-3.5" />
-                <span className="font-semibold uppercase tracking-wider text-cream text-[11px]">Works Where You Work</span>
-              </div>
-              <p className="mt-0.5 text-cream/65 text-[11px]">Email, Slack, WhatsApp, Teams</p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-1.5 text-coral">
-                <Database className="h-3.5 w-3.5" />
-                <span className="font-semibold uppercase tracking-wider text-cream text-[11px]">Accounting Synced</span>
-              </div>
-              <p className="mt-0.5 text-cream/65 text-[11px]">QuickBooks, Xero & spreadsheets</p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-1.5 text-coral">
-                <Clock className="h-3.5 w-3.5" />
-                <span className="font-semibold uppercase tracking-wider text-cream text-[11px]">Zero Double Entry</span>
-              </div>
-              <p className="mt-0.5 text-cream/65 text-[11px]">Enter data once. Never twice.</p>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-1.5 text-coral">
-                <ShieldCheck className="h-3.5 w-3.5" />
-                <span className="font-semibold uppercase tracking-wider text-cream text-[11px]">NDA Protection</span>
-              </div>
-              <p className="mt-0.5 text-cream/65 text-[11px]">Signed before seeing files</p>
-            </div>
-          </div>
-        </div>
+        {/* Bottom feature strip */}
+        <ul style={d(480)} className="rise grid grid-cols-2 border-t border-cream/15 sm:grid-cols-3 lg:grid-cols-5">
+          {strip.map(({ icon: Icon, title, body }, i) => (
+            <li
+              key={title}
+              className={`relative py-5 pr-4 text-[12px] leading-snug ${i > 0 ? "lg:border-l lg:border-cream/10 lg:pl-5" : ""}`}
+            >
+              {i === 0 && <span className="absolute -top-px left-0 h-[2px] w-24 bg-coral" />}
+              <Icon className={`h-4 w-4 ${i === 0 ? "text-coral" : "text-cream/70"}`} />
+              <p className={`mt-2 ${i === 0 ? "text-coral" : "text-cream/90"}`}>{title}</p>
+              <p className="text-cream/55">{body}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

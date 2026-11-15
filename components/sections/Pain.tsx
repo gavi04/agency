@@ -3,12 +3,12 @@ import { businessSegments, site } from "@/content/site";
 
 export default function Pain() {
   return (
-    <section id="businesses" aria-labelledby="business-heading" className="section border-b border-line fluted-mesh-cream">
+    <section id="businesses" aria-labelledby="business-heading" className="section mesh-blush">
       <div className="container-x">
         <div data-reveal className="mx-auto max-w-xl text-center">
           <p className="eyebrow">Pick your business</p>
           <h2 id="business-heading" className="h2 mt-2 text-navy">
-            Every business has chores that eat the day.
+            Every business has chores that <span className="mark">eat the day</span>.
           </h2>
           <p className="lead">
             Choose what you run to see the exact workflows we automate for businesses like yours.
@@ -21,8 +21,8 @@ export default function Pain() {
               key={b.id}
               data-reveal
               style={{ "--d": `${i * 80}ms` } as React.CSSProperties}
-              className={`flex flex-col justify-between rounded-2xl p-5 bg-white border border-[#eae0d0] transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${
-                b.featured ? "ring-1.5 ring-coral/60" : ""
+              className={`card flex flex-col justify-between rounded-2xl p-5 ${
+                b.featured ? "glow-border bg-navy text-cream border-transparent" : "bg-white/85 backdrop-blur-sm"
               }`}
             >
               <div>
@@ -31,12 +31,12 @@ export default function Pain() {
                     Flagship Specialty
                   </span>
                 )}
-                <h3 className="text-base font-bold text-navy">{b.title}</h3>
-                <p className="mt-0.5 text-[11px] text-muted">{b.subtitle}</p>
+                <h3 className={`text-base font-bold ${b.featured ? "text-cream" : "text-navy"}`}>{b.title}</h3>
+                <p className={`mt-0.5 text-[11px] ${b.featured ? "text-cream/65" : "text-muted"}`}>{b.subtitle}</p>
 
-                <ul className="mt-4 space-y-2 border-t border-line/60 pt-3.5">
+                <ul className={`mt-4 space-y-2 border-t pt-3.5 ${b.featured ? "border-cream/15" : "border-line/60"}`}>
                   {b.points.map((pt) => (
-                    <li key={pt} className="flex items-start gap-2 text-xs text-fg/85 leading-snug">
+                    <li key={pt} className={`flex items-start gap-2 text-xs leading-snug ${b.featured ? "text-cream/90" : "text-fg/85"}`}>
                       <Check className="h-3.5 w-3.5 shrink-0 text-coral mt-0.5" strokeWidth={2.8} />
                       <span>{pt}</span>
                     </li>
@@ -44,7 +44,7 @@ export default function Pain() {
                 </ul>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-line/60">
+              <div className={`mt-6 pt-3 border-t ${b.featured ? "border-cream/15" : "border-line/60"}`}>
                 <a
                   href={site.bookingUrl}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-coral hover:text-coral-hover transition-colors"

@@ -6,23 +6,24 @@ export default function HowItWorks() {
       <div className="container-x">
         <div data-reveal className="max-w-xl">
           <h2 id="how-heading" className="text-2xl font-bold leading-tight text-navy sm:text-3xl tracking-tight">
-            From &ldquo;this takes forever&rdquo; to &ldquo;it just happens&rdquo;.
+            From &ldquo;this takes forever&rdquo; to <span className="mark">&ldquo;it just happens&rdquo;</span>.
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             Four simple steps. You see the time saved in your own office before you spend a single cent.
           </p>
         </div>
 
-        <ol className="mt-8 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="relative mt-8 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <span aria-hidden="true" data-reveal className="step-line hidden lg:block" />
           {steps.map((s, i) => (
             <li
               key={s.step}
               data-reveal
               style={{ "--d": `${i * 80}ms` } as React.CSSProperties}
-              className="relative flex flex-col justify-between rounded-2xl bg-white border border-[#eae0d0] p-5 sm:p-5 shadow-xs transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
+              className="card group glow-border-hover glow-border relative flex flex-col justify-between rounded-2xl bg-white p-5"
             >
               <div>
-                <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-coral/15 font-display text-xs font-bold text-coral">
+                <span className="step-num relative z-10 flex h-8 w-8 items-center justify-center rounded-xl bg-navy text-cream font-display text-xs font-bold">
                   {s.step}
                 </span>
                 <h3 className="mt-4 text-[15px] font-bold text-navy leading-snug">{s.title}</h3>

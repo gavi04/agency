@@ -3,7 +3,7 @@ import { ArrowRight, Check } from "../Icons";
 
 export default function BeforeAfter() {
   return (
-    <section aria-labelledby="promises-heading" className="section fluted-mesh-navy blend-from-cream text-cream">
+    <section aria-labelledby="promises-heading" className="section fluted-mesh-navy blend-from-cream blend-navy-bottom text-cream">
       <div className="container-x">
         <div data-reveal className="mx-auto max-w-xl text-center">
           <p className="eyebrow text-coral before:bg-coral">Why Minus Zero</p>
@@ -21,10 +21,10 @@ export default function BeforeAfter() {
               key={p.number}
               data-reveal
               style={{ "--d": `${i * 100}ms` } as React.CSSProperties}
-              className="relative flex flex-col justify-between rounded-2xl glass-card-dark p-6 sm:p-7 hover:border-coral/40 transition-colors"
+              className="glow-border glow-border-hover relative flex flex-col justify-between rounded-2xl glass-card-dark p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-1"
             >
               <div>
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-coral">
+                <span className="text-shimmer font-display text-4xl sm:text-5xl font-extrabold">
                   {p.number}
                 </span>
                 <h3 className="mt-3 text-lg font-bold text-cream">

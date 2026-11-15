@@ -27,8 +27,8 @@ export default function Nav() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#14213D]/95 backdrop-blur-md shadow-md border-b border-cream/15"
-          : "bg-[#14213D] border-b border-cream/10"
+          ? "bg-[#14213D]/80 backdrop-blur-xl shadow-md border-b border-cream/10"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <nav
@@ -59,7 +59,7 @@ export default function Nav() {
         <div className="flex items-center gap-3">
           <a
             href={site.bookingUrl}
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-coral px-4 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-coral-hover hover:scale-[1.01]"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-coral-hover hover:scale-[1.01]"
           >
             <span>Start free trial</span>
             <ArrowRight className="h-3.5 w-3.5" />

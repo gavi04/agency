@@ -3,7 +3,7 @@ import { security } from "@/content/site";
 
 export default function Security() {
   return (
-    <section aria-labelledby="security-heading" className="section fluted-mesh-navy blend-from-cream text-cream border-t border-cream/15">
+    <section aria-labelledby="security-heading" className="section mesh-sand text-navy">
       <div className="container-x grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 items-center">
         <div data-reveal>
           <div className="flex items-center gap-2.5">
@@ -15,13 +15,13 @@ export default function Security() {
             </span>
           </div>
 
-          <h2 id="security-heading" className="h2 mt-4 text-cream">
-            Your business data is handled with care.
+          <h2 id="security-heading" className="h2 mt-4 text-navy">
+            Your business data is handled with <span className="mark">care</span>.
           </h2>
-          <p className="lead !text-cream/75">
+          <p className="lead">
             Bills, accounts, salaries and client records are sensitive. We treat them that way from the very first call.
           </p>
-          <div className="mt-4 rounded-xl glass-card-dark p-4 text-xs leading-relaxed text-cream/80">
+          <div className="mt-4 rounded-xl border-l-4 border-coral bg-white/70 p-4 text-xs leading-relaxed text-muted shadow-soft">
             <p className="font-semibold text-coral mb-0.5">Signed Non-Disclosure Agreement (NDA)</p>
             We sign a confidentiality agreement before examining your processes, spreadsheets, or files.
           </div>
@@ -35,7 +35,7 @@ export default function Security() {
                 key={s.title}
                 data-reveal
                 style={{ "--d": `${i * 60}ms` } as React.CSSProperties}
-                className="rounded-xl glass-card-dark p-4 hover:border-coral/40 transition-colors"
+                className="card rounded-xl !border-navy bg-navy p-4 text-cream fluted-mesh-navy"
               >
                 <Icon className="h-5 w-5 text-coral" />
                 <h3 className="mt-2.5 text-sm font-bold text-cream">{s.title}</h3>

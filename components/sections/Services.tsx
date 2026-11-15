@@ -9,7 +9,7 @@ export default function Services() {
         <div data-reveal className="max-w-xl">
           <p className="eyebrow">What we automate</p>
           <h2 id="automate-heading" className="h2 mt-2 text-navy">
-            If it repeats, we can automate it.
+            If it repeats, we can <span className="mark">automate it</span>.
           </h2>
           <p className="lead">
             These are just the common ones. Tell us about the task that annoys you most, and we&apos;ll take it from there.
