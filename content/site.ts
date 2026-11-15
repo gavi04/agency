@@ -18,6 +18,9 @@ export const site = {
   tagline: "Stop doing the same work every single day.",
   url: "https://accobiz.com",
   email: "info@accobiz.com",
+  // WhatsApp on/off switch: true shows the floating button and every
+  // "Chat on WhatsApp" link; false hides them all.
+  whatsappEnabled: false,
   whatsappNumber: "917717334545",
   whatsappMessage: `Hi, I'd like to book my free 3-day automation trial with ${BRAND_NAME}.`,
   // Leave empty to hide the LinkedIn button; paste your profile URL to show it

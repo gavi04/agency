@@ -80,7 +80,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
-      <WhatsAppFab />
+      {site.whatsappEnabled && <WhatsAppFab />}
       <ScrollReveal />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>

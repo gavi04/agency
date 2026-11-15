@@ -12,15 +12,21 @@ export default function Faq() {
           </h2>
           <p className="lead">
             Have a question about your specific workflow?{" "}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-coral underline-offset-4 hover:underline"
-            >
-              Ask on WhatsApp
-            </a>{" "}
-            or email{" "}
+            {site.whatsappEnabled ? (
+              <>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-coral underline-offset-4 hover:underline"
+                >
+                  Ask on WhatsApp
+                </a>{" "}
+                or email{" "}
+              </>
+            ) : (
+              <>Email us at </>
+            )}
             <a
               href={`mailto:${site.email}`}
               className="font-semibold text-coral underline-offset-4 hover:underline"

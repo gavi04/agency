@@ -41,6 +41,7 @@ export default function FinalCta() {
               </ul>
 
               <div className="mt-6 border-t border-cream/15 pt-5">
+                {site.whatsappEnabled && (
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -50,7 +51,8 @@ export default function FinalCta() {
                   <WhatsApp className="h-4 w-4" />
                   Chat on WhatsApp
                 </a>
-                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-cream/75">
+                )}
+                <div className={`${site.whatsappEnabled ? "mt-3" : ""} flex flex-wrap gap-x-4 gap-y-1 text-xs text-cream/75`}>
                   <a href={`mailto:${site.email}`} className="hover:text-coral transition-colors flex items-center gap-1">
                     <Mail className="h-3 w-3 text-coral" /> {site.email}
                   </a>

@@ -16,7 +16,7 @@ export default function ContactForm() {
 
     if (site.formEndpoint.includes("YOUR_FORM_ID")) {
       setStatus("error");
-      setMessage("The form isn't connected yet. Please message us on WhatsApp or email for your trial.");
+      setMessage(`The form isn't connected yet. Please email us at ${site.email} for your trial.`);
       return;
     }
 
@@ -33,7 +33,11 @@ export default function ContactForm() {
       setMessage("Thank you! We'll email you within 24 hours to book a short call and set up your free 3-day trial.");
     } catch {
       setStatus("error");
-      setMessage("Something went wrong. Please message us directly on WhatsApp to claim your free trial.");
+      setMessage(
+        site.whatsappEnabled
+          ? "Something went wrong. Please message us directly on WhatsApp to claim your free trial."
+          : `Something went wrong. Please email us at ${site.email} to claim your free trial.`,
+      );
     }
   }
 
@@ -90,7 +94,7 @@ export default function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="phone" className="field-label">
-            Phone / WhatsApp <span className="font-normal text-muted">(optional)</span>
+            {site.whatsappEnabled ? "Phone / WhatsApp" : "Phone"} <span className="font-normal text-muted">(optional)</span>
           </label>
           <input
             id="phone"
@@ -147,9 +151,11 @@ export default function ContactForm() {
         {status === "error" ? (
           <>
             {message}{" "}
+            {site.whatsappEnabled && (
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-semibold underline">
               Open WhatsApp
             </a>
+            )}
           </>
         ) : (
           "We'll reply within 24 hours. No commitment, no payment details needed."
