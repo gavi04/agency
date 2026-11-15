@@ -21,6 +21,7 @@ export default function Footer() {
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/75">
             {site.tagline} We automate repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses, and connect them to your accounting software and CRM.
           </p>
+          {(site.linkedin || site.github) && (
           <div className="mt-6 flex gap-3">
             {site.linkedin && (
             <a
@@ -33,6 +34,7 @@ export default function Footer() {
               <LinkedIn className="h-4 w-4" />
             </a>
             )}
+            {site.github && (
             <a
               href={site.github}
               target="_blank"
@@ -42,7 +44,9 @@ export default function Footer() {
             >
               <GitHub className="h-4 w-4" />
             </a>
+            )}
           </div>
+          )}
         </div>
 
         <nav aria-label="Footer Navigation">

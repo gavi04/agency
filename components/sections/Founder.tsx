@@ -52,6 +52,7 @@ export default function Founder() {
                 <LinkedIn className="h-[18px] w-[18px]" />
               </a>
               )}
+              {site.github && (
               <a
                 href={site.github}
                 target="_blank"
@@ -61,6 +62,7 @@ export default function Founder() {
               >
                 <GitHub className="h-[18px] w-[18px]" />
               </a>
+              )}
             </div>
           </div>
         </div>

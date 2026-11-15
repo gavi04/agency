@@ -22,7 +22,8 @@ export const site = {
   whatsappMessage: `Hi, I'd like to book my free 3-day automation trial with ${BRAND_NAME}.`,
   // Leave empty to hide the LinkedIn button; paste your profile URL to show it
   linkedin: "",
-  github: "https://github.com/",
+  // Leave empty to hide the GitHub button; paste your profile URL to show it
+  github: "",
   privacyUrl: "/privacy",
   bookingUrl: "#contact",
   formEndpoint: "https://formspree.io/f/xppdpany",
