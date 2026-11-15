@@ -31,7 +31,7 @@ export default function OpengraphImage() {
             Stop doing the same work every single day.
           </div>
           <div style={{ marginTop: 24, fontSize: 30, color: "rgba(255,255,255,0.8)", lineHeight: 1.35 }}>
-            We automate repetitive daily chores for CA firms, service businesses, shops and factories. Enter data once. Never twice.
+            We automate repetitive daily chores for accounting firms, agencies, e-commerce and small businesses. Enter data once. Never twice.
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 26, color: "#FF6B5B", fontWeight: 700 }}>

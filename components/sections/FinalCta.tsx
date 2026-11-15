@@ -6,21 +6,21 @@ export default function FinalCta() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="section fluted-mesh-cream border-t border-line">
       <div className="container-x">
-        <div className="overflow-hidden rounded-2xl fluted-mesh-navy shadow-xl border border-white/15 text-white">
+        <div className="overflow-hidden rounded-2xl fluted-mesh-navy shadow-xl border border-cream/20 text-cream">
           <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:p-10 items-center">
             <div data-reveal>
               <div className="inline-flex items-center gap-1.5 rounded-full bg-coral/20 border border-coral/30 px-3 py-0.5 text-[11px] font-semibold tracking-wider text-coral mb-3">
                 <span>Free 3-Day Working Trial</span>
               </div>
-              <h2 id="contact-heading" className="h2 text-white">
+              <h2 id="contact-heading" className="h2 text-cream">
                 {finalCta.headline}
                 <span className="block text-coral">{finalCta.headlineAccent}</span>
               </h2>
-              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-white/75">
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-cream/80">
                 {finalCta.body}
               </p>
 
-              <ul className="mt-5 space-y-2 text-xs text-white/90">
+              <ul className="mt-5 space-y-2 text-xs text-cream/90">
                 <li className="flex items-center gap-2">
                   <Check className="h-3.5 w-3.5 text-coral shrink-0" strokeWidth={3} />
                   <span>No payment details & zero commitment</span>
@@ -35,7 +35,7 @@ export default function FinalCta() {
                 </li>
               </ul>
 
-              <div className="mt-6 border-t border-white/10 pt-5">
+              <div className="mt-6 border-t border-cream/15 pt-5">
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -45,7 +45,7 @@ export default function FinalCta() {
                   <WhatsApp className="h-4 w-4" />
                   Chat on WhatsApp
                 </a>
-                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/70">
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-cream/75">
                   <a href={site.phoneHref} className="hover:text-coral transition-colors flex items-center gap-1">
                     <Phone className="h-3 w-3 text-coral" /> {site.phoneDisplay}
                   </a>

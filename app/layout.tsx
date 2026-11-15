@@ -11,23 +11,30 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-display",
 });
 
-const title = "Minus Zero | Stop Doing the Same Work Every Single Day";
+const title = "Minus Zero | Business Process Automation Agency for Small Businesses";
 const description =
-  "Whether you run a CA firm, a service business, a shop or a factory, Minus Zero automates your repetitive daily chores and connects them to your accounting software. Enter data once. Never twice.";
+  "Custom workflow automation for accounting firms, agencies, e-commerce and small businesses in the US, UK, Europe, Canada & Australia. QuickBooks, Xero, HubSpot & AI integrations. Free 3-day trial.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title,
   description,
   keywords: [
-    "Minus Zero automation",
-    "CA firm automation",
-    "business automation India",
-    "repetitive chores automation",
-    "Tally accounting sync",
-    "WhatsApp document collection",
-    "billing stock automation",
-    "service business workflow",
+    "business process automation agency",
+    "workflow automation services",
+    "automation agency for small business",
+    "bookkeeping automation",
+    "accounting firm automation",
+    "QuickBooks automation",
+    "Xero integration services",
+    "Zapier expert",
+    "Make.com automation agency",
+    "n8n automation",
+    "AI automation agency",
+    "CRM automation",
+    "automation agency Europe",
+    "GDPR compliant automation",
+    "Exact Online automation",
   ],
   alternates: { canonical: "/" },
   icons: {
@@ -41,7 +48,8 @@ export const metadata: Metadata = {
     siteName: site.name,
     title,
     description,
-    locale: "en_IN",
+    locale: "en_US",
+    alternateLocale: ["en_GB", "en_IE", "en_CA", "en_AU"],
   },
   twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },
@@ -55,7 +63,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="bg-bg text-fg min-h-screen antialiased selection:bg-coral selection:text-white">
         {children}
       </body>

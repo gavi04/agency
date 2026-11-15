@@ -95,10 +95,10 @@ export default function ContactForm() {
             <option value="" disabled>
               Select your business
             </option>
-            <option value="CA firm">CA firm</option>
-            <option value="Service provider">Service provider</option>
-            <option value="Trader / retailer">Trader / retailer</option>
-            <option value="Manufacturer">Manufacturer</option>
+            <option value="Accounting firm">Accounting / bookkeeping firm</option>
+            <option value="Agency / service business">Agency / service business</option>
+            <option value="E-commerce / retail">E-commerce / retail</option>
+            <option value="Small business / operations">Small business / operations</option>
             <option value="Other">Other</option>
           </select>
         </div>
@@ -113,7 +113,7 @@ export default function ContactForm() {
           name="chore"
           rows={3}
           required
-          placeholder="e.g. Chasing clients on WhatsApp for GST bills, re-typing purchase invoices into Tally, stock reorder alerts…"
+          placeholder="e.g. Chasing clients for receipts, re-typing invoices into QuickBooks, copying leads into our CRM…"
           className="field resize-y"
         />
       </div>

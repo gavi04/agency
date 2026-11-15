@@ -1,24 +1,25 @@
 /**
  * ============================================================================
- *  MINUS ZERO — SITE CONTENT
+ *  MINUS ZERO — SITE CONTENT (international edition)
  * ============================================================================
- *  Exact content mirrored from Envesty Automation Landing Page:
- *  - Hub (all businesses: CA firms, service providers, traders, manufacturers)
- *  - CA firms as flagship segment
- *  - Brand: Minus Zero
- *  - Colors: 50% Navy (#14213D), 30% Cream (#F4EDE0), 10% Coral (#FF6B5B)
+ *  Target markets: US, UK, Canada, Australia, UAE (English-speaking SMBs).
+ *  Flagship segment: accounting & bookkeeping firms (CPAs, accountants).
+ *  Brand: Minus Zero
+ *  Colors: 50% Navy (#14213D), 30% Cream (#F4EDE0), 10% Coral (#FF6B5B)
  * ============================================================================
  */
 
 export const site = {
   name: "Minus Zero",
   tagline: "Stop doing the same work every single day.",
+  // EDIT: move to a .com (or .io/.ai) domain. A .in domain tells Google the
+  // site targets India and will hold back rankings in the US/UK/AU.
   url: "https://minuszero.in",
   email: "gavisohal87@gmail.com",
   phoneDisplay: "+91-7717334545",
   phoneHref: "tel:+917717334545",
   whatsappNumber: "917717334545",
-  whatsappMessage: "Hi, I'd like to get my free 3-day trial with Minus Zero.",
+  whatsappMessage: "Hi, I'd like to book my free 3-day automation trial with Minus Zero.",
   linkedin: "https://www.linkedin.com/in/",
   github: "https://github.com/",
   privacyUrl: "/privacy",
@@ -38,15 +39,15 @@ export const navLinks = [
 ];
 
 export const hero = {
-  eyebrow: "Free basic version · Ready for a 3-day trial",
+  eyebrow: "Business process automation · Free 3-day trial",
   headline: "Stop doing the same work every single day.",
   subheading:
-    "Whether you run a CA firm, a service business, a shop or a factory, we automate your repetitive daily chores and connect them to your accounting software. Enter data once. Never twice.",
+    "We build custom workflow automations for accounting firms, agencies, e-commerce stores and small businesses, connected to QuickBooks, Xero, HubSpot and the tools you already use. Enter data once. Never twice.",
   primaryCta: "Get my free 3-day trial",
   secondaryCta: "See what we automate",
   trustPoints: [
     "No technical knowledge needed",
-    "Syncs with your accounting software",
+    "Syncs with QuickBooks, Xero & your CRM",
     "Built around how you already work",
   ],
 };
@@ -54,26 +55,26 @@ export const hero = {
 // Real-time automation chore tracker inside hero
 export const heroChores = [
   {
-    title: "Sales invoice created",
-    detail: "Sent to customer on WhatsApp",
+    title: "Invoice created & sent",
+    detail: "Emailed to customer with a Stripe payment link",
     badge: "Instant",
     icon: "fileText",
   },
   {
-    title: "Stock updated",
-    detail: "Reorder alert raised for 2 items",
+    title: "Inventory updated",
+    detail: "Reorder alert raised for 2 SKUs",
     badge: "Auto Sync",
     icon: "database",
   },
   {
     title: "Synced to accounting",
-    detail: "No manual entry needed in Tally or Zoho",
+    detail: "Posted to QuickBooks and Xero, no manual entry",
     badge: "Zero Entry",
     icon: "plug",
   },
   {
     title: "Payment reminder",
-    detail: "Scheduled for 3 overdue clients · 6:00 PM",
+    detail: "Scheduled for 3 overdue clients · 9:00 AM",
     badge: "Scheduled",
     icon: "bell",
   },
@@ -82,73 +83,73 @@ export const heroChores = [
 // Pick your business categories
 export const businessSegments = [
   {
-    id: "ca-firms",
-    title: "CA firms",
-    subtitle: "Tax practitioners & accounting practices",
+    id: "accounting-firms",
+    title: "Accounting & bookkeeping firms",
+    subtitle: "CPAs, accountants, bookkeepers & tax practices",
     featured: true,
     points: [
-      "Client document collection on WhatsApp",
-      "GST, TDS & ITR due-date alerts",
-      "Staff work tracking & article allocation",
-      "Statements to accounting entries (Tally ready)",
+      "Client document collection via secure portal, email or WhatsApp",
+      "Tax deadline & filing reminders for every client",
+      "Bank statements & receipts to QuickBooks / Xero entries",
+      "Staff workload tracking & month-end close checklists",
     ],
-    cta: "See automations for CA firms",
+    cta: "See automations for accounting firms",
   },
   {
     id: "services",
-    title: "Service providers",
-    subtitle: "Agencies, consultants, clinics, coaching",
+    title: "Agencies & service businesses",
+    subtitle: "Marketing agencies, consultants, clinics, coaches",
     featured: false,
     points: [
       "Recurring invoices raised automatically",
       "Automated payment follow-ups & reminders",
-      "Client task boards & automated weekly reports",
-      "Client onboarding & contract signatures",
+      "Client onboarding, contracts & e-signatures",
+      "Automated weekly client reports",
     ],
-    cta: "See automations for service providers",
+    cta: "See automations for service businesses",
   },
   {
-    id: "traders",
-    title: "Traders & retailers",
-    subtitle: "Shops, wholesalers & distributors",
+    id: "ecommerce",
+    title: "E-commerce & retail",
+    subtitle: "Shopify, Amazon & multi-channel sellers",
     featured: false,
     points: [
-      "Billing that auto-updates stock in real time",
-      "Low-stock reorder alerts sent to managers",
-      "Credit customer ledger & WhatsApp reminders",
-      "Daily sales & collection summary on phone",
+      "Orders, inventory & stock synced across channels",
+      "Low-stock reorder alerts and purchase orders",
+      "Sales & fees reconciled into your accounting software",
+      "Daily sales and cash summary on your phone",
     ],
-    cta: "See automations for traders & retailers",
+    cta: "See automations for e-commerce",
   },
   {
-    id: "manufacturers",
-    title: "Manufacturers",
-    subtitle: "Factories & production units",
+    id: "operations",
+    title: "Small businesses & operations",
+    subtitle: "Trades, logistics, property & light manufacturing",
     featured: false,
     points: [
-      "Raw material & finished goods stock logs",
-      "Biometric attendance linked directly to payroll",
-      "Production batches & dispatch registers",
-      "Vendor purchase order & GRN tracking",
+      "Timesheets & attendance linked to payroll",
+      "Job, dispatch & delivery tracking",
+      "Vendor purchase orders & approvals",
+      "Lead capture from your website straight into your CRM",
     ],
-    cta: "See automations for manufacturers",
+    cta: "See automations for your operations",
   },
 ];
 
 // List of all automated repetitive chores
 export const choresList = [
-  "Office management",
-  "Task management",
-  "Stock management",
-  "Payroll",
-  "Attendance",
+  "Data entry",
   "Invoicing & billing",
   "Payment reminders",
+  "Bookkeeping sync",
   "Client onboarding",
   "Document collection",
-  "Daily reports",
+  "Lead follow-up & CRM",
+  "Inventory management",
+  "Payroll & timesheets",
+  "Reporting & dashboards",
   "Approvals",
-  "Data entry",
+  "AI email & document processing",
   "+ Anything else you repeat",
 ];
 
@@ -156,13 +157,13 @@ export const choresList = [
 export const promises = [
   {
     number: "01",
-    title: "So easy, anyone in your team can use it.",
-    body: "If you can use WhatsApp, you can use what we build. Simple screens, plain language, no training sessions, no manuals. Ease of use comes first in every decision we make.",
+    title: "So easy, anyone on your team can use it.",
+    body: "If you can use email or a chat app, you can use what we build. Simple screens, plain language, no training sessions, no manuals. Ease of use comes first in every decision we make.",
   },
   {
     number: "02",
     title: "Try a working version free for 3 days.",
-    body: "No long proposals, no paying upfront. We build a basic version for your actual chore and hand it to you to use for 3 days, free. Like it? We take it live.",
+    body: "No long proposals, no paying upfront. We build a basic version for your actual workflow and hand it to you to use for 3 days, free. Like it? We take it live.",
   },
 ];
 
@@ -171,7 +172,7 @@ export const steps = [
   {
     step: "1",
     title: "Tell us the chore",
-    body: "A short call. Show us how you do it today: the register, the Excel sheet, the WhatsApp messages.",
+    body: "A short video call. Show us how you do it today: the spreadsheet, the inbox, the copy-paste.",
   },
   {
     step: "2",
@@ -181,12 +182,12 @@ export const steps = [
   {
     step: "3",
     title: "Use it free for 3 days",
-    body: "Run your real work on it. See the hours you get back before you spend a rupee.",
+    body: "Run your real work on it. See the hours you get back before you spend a cent.",
   },
   {
     step: "4",
     title: "Go live & connect",
-    body: "We finish it, link it to your accounting software if you need, and keep improving it with you.",
+    body: "We finish it, connect it to your accounting software and CRM, and keep improving it with you.",
   },
 ];
 
@@ -205,7 +206,7 @@ export const security = [
   {
     icon: "database",
     title: "Stays in your systems",
-    body: "Wherever possible, files stay in your own Drive or software, not ours.",
+    body: "Wherever possible, data stays in your own Google Drive, Microsoft 365 or software, not ours. GDPR-compliant by design, with EU data hosting available.",
   },
   {
     icon: "lock",
@@ -218,15 +219,23 @@ export const security = [
 export const faqs = [
   {
     q: "I'm not technical. Will I be able to use it?",
-    a: "Yes. That is the whole point. We design for the person who will use it every day, whether that's you, your accountant or your shop staff.",
+    a: "Yes. That is the whole point. We design for the person who will use it every day, whether that's you, your bookkeeper or your operations staff.",
   },
   {
-    q: "Do I have to change my accounting software?",
-    a: "No. We connect to what you already use (Tally, Zoho Books, Busy, Excel, etc.), so your accounts get updated without anyone typing the same entry twice.",
+    q: "Do I have to change my software?",
+    a: "No. We connect to what you already use (QuickBooks, Xero, Sage, Exact, DATEV, FreshBooks, HubSpot, Shopify, Google Sheets, Excel and more), so nobody types the same entry twice.",
+  },
+  {
+    q: "Do you work with businesses outside India?",
+    a: "Yes. We work remotely with clients across the US, UK, Europe, Canada, Australia and the Middle East. European clients get calls during your working day, GDPR-compliant data handling and a data processing agreement on request.",
   },
   {
     q: "What happens after the 3-day trial?",
-    a: "If it's saving you time, we take it live at an affordable, clear price. If it isn't, you walk away and owe nothing.",
+    a: "If it's saving you time, we take it live at a clear, fixed price. If it isn't, you walk away and owe nothing.",
+  },
+  {
+    q: "Do you use AI, Zapier or Make?",
+    a: "We use whatever fits: Zapier, Make, n8n, custom code and AI models for reading documents and emails. You get the result, not a tool you have to manage.",
   },
   {
     q: "My process is unusual. Can you still automate it?",
@@ -237,7 +246,7 @@ export const faqs = [
 export const finalCta = {
   headline: "Tell us one chore.",
   headlineAccent: "Get it automated, free for 3 days.",
-  body: "Fill this in and our team will call you to understand the task. No commitment, no payment details.",
+  body: "Fill this in and we'll schedule a short call in your time zone to understand the task. No commitment, no payment details.",
 };
 
 export const founder = {
@@ -247,38 +256,39 @@ export const founder = {
   photo: "",
   bio: [
     "I am a software engineer specializing in business automation, API integrations, and accounting workflows.",
-    "I started Minus Zero to eliminate repetitive daily chores for CA firms and businesses, so teams can focus on high-value work.",
+    "I started Minus Zero to eliminate repetitive daily chores for accounting firms and small businesses, so teams can focus on high-value work.",
   ],
 };
 
 export const pricing = {
-  note: "Prices are transparent and agreed upon after your free 3-day trial.",
+  note: "Prices are fixed and agreed upon after your free 3-day trial.",
   tiers: [
     {
       name: "Starter",
-      forWho: "One chore to start with",
-      setup: "₹15,000",
-      monthly: "₹3,000",
+      forWho: "One workflow to start with",
+      setup: "$750",
+      monthly: "$150",
       featured: false,
-      features: ["1 core automated chore", "WhatsApp integration", "Accounting sync", "Free 3-day trial"],
+      features: ["1 automated workflow", "Accounting / CRM sync", "Email support", "Free 3-day trial"],
       cta: "Start free trial",
     },
     {
       name: "Growth",
-      forWho: "Most popular for CA firms & businesses",
-      setup: "₹35,000",
-      monthly: "₹6,000",
+      forWho: "Most popular for firms & growing businesses",
+      setup: "$2,000",
+      monthly: "$400",
       featured: true,
-      features: ["Up to 3 automated chores", "Full client/stock tracker", "Priority support", "Free 3-day trial"],
+      features: ["Up to 3 automated workflows", "AI document processing", "Priority support", "Free 3-day trial"],
       cta: "Start free trial",
     },
   ],
 };
 
+// EDIT: replace with a real client once you have one (set isPlaceholder: true until then)
 export const caseStudy = {
-  isPlaceholder: false,
-  firm: "Apex Tax Advisors",
-  summary: "Automated GST document collection and invoice entry.",
+  isPlaceholder: true,
+  firm: "Bookkeeping firm (example)",
+  summary: "Automated client document collection and receipt entry into QuickBooks.",
   metrics: [
     { value: "30+", label: "Hours saved weekly" },
     { value: "0", label: "Manual entries" },
@@ -287,10 +297,9 @@ export const caseStudy = {
 
 export const testimonials = [
   {
-    isPlaceholder: false,
-    quote: "We don't chase clients for documents on WhatsApp anymore. Everything syncs on its own.",
-    name: "Rajesh Singhania",
-    role: "Partner, CA Firm",
+    isPlaceholder: true,
+    quote: "We don't chase clients for documents anymore. Everything syncs on its own.",
+    name: "Client name",
+    role: "Partner, accounting firm",
   },
 ];
-

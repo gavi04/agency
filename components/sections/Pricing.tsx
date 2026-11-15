@@ -29,7 +29,7 @@ export default function Pricing() {
             >
               {t.featured && (
                 <span className="absolute -top-3.5 left-8 rounded-full bg-coral px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
-                  Recommended for CA Firms
+                  Recommended for growing firms
                 </span>
               )}
               <h3 className="text-xl font-bold text-fg">{t.name}</h3>

@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import Hero from "@/components/sections/Hero";
+import Integrations from "@/components/Integrations";
 import HowItWorks from "@/components/sections/HowItWorks"; // Section 2 as requested
 import Pain from "@/components/sections/Pain"; // Pick your business
 import Services from "@/components/sections/Services"; // What we automate & Connected to books
@@ -24,9 +25,11 @@ const jsonLd = {
       url: site.url,
       email: site.email,
       telephone: site.phoneHref.replace("tel:", ""),
-      areaServed: { "@type": "Country", name: "India" },
+      areaServed: [...["US", "GB", "IE", "NL", "DE", "SE", "DK", "CA", "AU", "AE", "IN"].map((c) => ({ "@type": "Country", name: c })), { "@type": "Place", name: "Europe" }],
+      serviceType: "Business process automation",
+      knowsAbout: ["Workflow automation", "QuickBooks integration", "Xero integration", "AI document processing", "Zapier", "Make", "n8n", "CRM automation"],
       description:
-        "Minus Zero automates repetitive daily chores for CA firms, service businesses, traders, and factories, connecting them directly to accounting software. Enter data once. Never twice.",
+        "Minus Zero automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to QuickBooks, Xero and their CRM. Enter data once. Never twice.",
       sameAs: [site.linkedin, site.github],
     },
     {
@@ -60,6 +63,7 @@ export default function Home() {
       <main id="main">
         {/* Section 1: Hero */}
         <Hero />
+        <Integrations />
         {/* Section 2: Four simple steps ("From this takes forever to it just happens") */}
         <HowItWorks />
         {/* Section 3: Pick your business */}

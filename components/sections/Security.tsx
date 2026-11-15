@@ -3,7 +3,7 @@ import { security } from "@/content/site";
 
 export default function Security() {
   return (
-    <section aria-labelledby="security-heading" className="section fluted-mesh-navy text-white border-t border-white/10">
+    <section aria-labelledby="security-heading" className="section fluted-mesh-navy blend-from-cream text-cream border-t border-cream/15">
       <div className="container-x grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 items-center">
         <div data-reveal>
           <div className="flex items-center gap-2.5">
@@ -15,13 +15,13 @@ export default function Security() {
             </span>
           </div>
 
-          <h2 id="security-heading" className="h2 mt-4 text-white">
+          <h2 id="security-heading" className="h2 mt-4 text-cream">
             Your business data is handled with care.
           </h2>
-          <p className="lead !text-white/75">
+          <p className="lead !text-cream/75">
             Bills, accounts, salaries and client records are sensitive. We treat them that way from the very first call.
           </p>
-          <div className="mt-4 rounded-xl glass-card-dark p-4 text-xs leading-relaxed text-white/80">
+          <div className="mt-4 rounded-xl glass-card-dark p-4 text-xs leading-relaxed text-cream/80">
             <p className="font-semibold text-coral mb-0.5">Signed Non-Disclosure Agreement (NDA)</p>
             We sign a confidentiality agreement before examining your processes, spreadsheets, or files.
           </div>
@@ -38,8 +38,8 @@ export default function Security() {
                 className="rounded-xl glass-card-dark p-4 hover:border-coral/40 transition-colors"
               >
                 <Icon className="h-5 w-5 text-coral" />
-                <h3 className="mt-2.5 text-sm font-bold text-white">{s.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-white/70">{s.body}</p>
+                <h3 className="mt-2.5 text-sm font-bold text-cream">{s.title}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-cream/70">{s.body}</p>
               </li>
             );
           })}

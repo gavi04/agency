@@ -10,6 +10,14 @@ export default function ScrollReveal() {
     const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     if (!("IntersectionObserver" in window)) return;
 
+    // Auto-stagger: sibling reveals cascade in, 90ms apart.
+    els.forEach((el) => {
+      if (el.style.getPropertyValue("--d")) return;
+      const sibs = Array.from(el.parentElement?.children ?? []).filter((c) => c.hasAttribute("data-reveal"));
+      const i = sibs.indexOf(el);
+      if (i > 0) el.style.setProperty("--d", `${Math.min(i, 6) * 90}ms`);
+    });
+
     // Anything already on screen stays visible, so nothing flickers.
     els.forEach((el) => {
       if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("is-visible");

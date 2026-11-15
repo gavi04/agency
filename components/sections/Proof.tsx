@@ -11,7 +11,7 @@ export default function Proof() {
             Measurable hours recovered across busy seasons
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
-            Real outcomes from automating client document collection, GST schedules, and bank statement processing.
+            Real outcomes from automating client document collection, tax deadlines, and bank statement processing.
           </p>
         </div>
 

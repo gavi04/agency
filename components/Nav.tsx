@@ -27,8 +27,8 @@ export default function Nav() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#14213D]/95 backdrop-blur-md shadow-md border-b border-white/10"
-          : "bg-[#14213D] border-b border-white/5"
+          ? "bg-[#14213D]/95 backdrop-blur-md shadow-md border-b border-cream/15"
+          : "bg-[#14213D] border-b border-cream/10"
       }`}
     >
       <nav
@@ -43,13 +43,13 @@ export default function Nav() {
           <Logo onDark={true} />
         </a>
 
-        {/* Desktop pill navigation (Tidewell inspired) */}
-        <div className="hidden md:flex items-center gap-1 rounded-full bg-white/[0.07] border border-white/10 px-2.5 py-1 backdrop-blur-sm">
+        {/* Desktop pill navigation (Tidewell inspired with cream tint) */}
+        <div className="hidden md:flex items-center gap-1 rounded-full bg-cream/[0.08] border border-cream/15 px-2.5 py-1 backdrop-blur-sm">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-1 text-xs font-medium text-white/80 transition-colors hover:text-white hover:bg-white/10"
+              className="rounded-full px-3 py-1 text-xs font-medium text-cream/80 transition-colors hover:text-cream hover:bg-cream/10"
             >
               {l.label}
             </a>

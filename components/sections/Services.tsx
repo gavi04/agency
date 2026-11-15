@@ -59,7 +59,7 @@ export default function Services() {
                 </li>
                 <li className="flex items-center gap-2.5 text-xs font-medium text-fg">
                   <Check className="h-3.5 w-3.5 text-coral shrink-0" strokeWidth={3} />
-                  Works with your current tools: Tally, Zoho, Busy, Excel
+                  Works with your current tools: QuickBooks, Xero, Sage, HubSpot, Excel
                 </li>
               </ul>
 

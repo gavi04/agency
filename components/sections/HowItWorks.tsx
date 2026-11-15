@@ -9,7 +9,7 @@ export default function HowItWorks() {
             From &ldquo;this takes forever&rdquo; to &ldquo;it just happens&rdquo;.
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Four simple steps. You see the time saved in your own office before you spend a single rupee.
+            Four simple steps. You see the time saved in your own office before you spend a single cent.
           </p>
         </div>
 

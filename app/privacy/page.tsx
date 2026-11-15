@@ -3,7 +3,7 @@ import Logo from "@/components/Logo";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Minus Labs",
+  title: "Privacy Policy | Minus Zero",
   robots: { index: false },
 };
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Privacy() {
   return (
     <main className="container-x max-w-3xl py-16">
-      <a href="/" aria-label="Minus Labs home">
+      <a href="/" aria-label="Minus Zero home">
         <Logo />
       </a>
       <h1 className="mt-10 text-3xl font-bold">Privacy policy</h1>
