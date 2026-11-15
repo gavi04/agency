@@ -3,7 +3,7 @@ import { choresList, site } from "@/content/site";
 
 export default function Services() {
   return (
-    <section id="what-we-automate" aria-labelledby="automate-heading" className="section fluted-mesh-cream border-b border-line">
+    <section id="what-we-automate" aria-labelledby="automate-heading" className="section fluted-mesh-cream">
       <div className="container-x">
         {/* Header */}
         <div data-reveal className="max-w-xl">
