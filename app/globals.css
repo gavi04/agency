@@ -514,3 +514,8 @@ details.faq-item[open] { border-left-color: #FF6B5B; box-shadow: 0 12px 30px -14
 .glow-fill h3, .glow-fill p, .glow-fill li, .glow-fill a { text-shadow: 0 1px 8px rgba(20, 33, 61, .55); }
 .glow-fill a { color: #FFC4BB; }
 .glow-fill a:hover { color: #fff; }
+
+/* Hide the page scrollbar (scrolling still works) and block sideways overflow */
+html { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar { display: none; width: 0; height: 0; }
+body { overflow-x: clip; }
