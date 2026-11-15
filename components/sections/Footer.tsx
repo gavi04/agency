@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <Logo onDark={true} />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/75">
-            {site.tagline} We automate repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses, and connect them to QuickBooks, Xero and your CRM.
+            {site.tagline} We automate repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses, and connect them to your accounting software and CRM.
           </p>
           <div className="mt-6 flex gap-3">
             <a

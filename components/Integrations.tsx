@@ -1,6 +1,6 @@
 const tools = [
-  "QuickBooks", "Xero", "Sage", "Exact", "DATEV", "FreshBooks", "Stripe", "Shopify", "HubSpot", "Salesforce",
-  "Google Sheets", "Excel", "Slack", "Microsoft Teams", "Gmail", "Outlook", "Zapier", "Make", "n8n", "OpenAI", "Claude",
+  "Accounting software", "CRM", "Spreadsheets", "Email inbox", "Payments", "Online store", "Invoicing",
+  "Team chat", "Cloud storage", "E-signatures", "Payroll", "Inventory", "Calendars", "AI document reading",
 ];
 
 // Infinite scrolling strip of tools we connect. Duplicated list = seamless loop.

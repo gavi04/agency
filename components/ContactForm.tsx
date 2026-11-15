@@ -113,7 +113,7 @@ export default function ContactForm() {
           name="chore"
           rows={3}
           required
-          placeholder="e.g. Chasing clients for receipts, re-typing invoices into QuickBooks, copying leads into our CRM…"
+          placeholder="e.g. Chasing clients for receipts, re-typing invoices into our accounting software, copying leads into our CRM…"
           className="field resize-y"
         />
       </div>

@@ -1,9 +1,9 @@
-import { Check, WhatsApp } from "./Icons";
+import { Check, Mail } from "./Icons";
 
 type Status = "Filed" | "Received" | "Pending";
 
 const items: { name: string; task: string; status: Status }[] = [
-  { name: "Harper & Co. CPAs", task: "Q3 receipts · 32 entries posted to QuickBooks", status: "Received" },
+  { name: "Harper & Co. CPAs", task: "Q3 receipts · 32 entries posted to books", status: "Received" },
   { name: "Bright Dental", task: "Sales tax return · reminder sent today", status: "Pending" },
   { name: "Northside Logistics", task: "Estimated tax · filed & verified", status: "Filed" },
 ];
@@ -60,16 +60,16 @@ export default function DashboardMock() {
         </div>
       </div>
 
-      {/* Floating minimal WhatsApp indicator */}
+      {/* Floating reminder toast */}
       <div
         aria-hidden="true"
         className="toast-in absolute -bottom-3 -left-3 flex items-center gap-2.5 rounded-xl glass-card-dark px-3 py-2 text-cream shadow-lg"
       >
-        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white">
-          <WhatsApp className="h-3.5 w-3.5" />
+        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-coral text-white">
+          <Mail className="h-3.5 w-3.5" />
         </span>
         <p className="text-[11px] font-medium text-cream/95">
-          Reminders sent on WhatsApp <Check className="inline h-3 w-3 text-coral" strokeWidth={3} />
+          Payment reminders sent <Check className="inline h-3 w-3 text-coral" strokeWidth={3} />
         </p>
       </div>
     </figure>

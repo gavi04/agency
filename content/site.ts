@@ -42,12 +42,12 @@ export const hero = {
   eyebrow: "Business process automation · Free 3-day trial",
   headline: "Stop doing the same work every single day.",
   subheading:
-    "We build custom workflow automations for accounting firms, agencies, e-commerce stores and small businesses, connected to QuickBooks, Xero, HubSpot and the tools you already use. Enter data once. Never twice.",
+    "We build custom workflow automations for accounting firms, agencies, e-commerce stores and small businesses, connected to your accounting software, CRM and the tools you already use. Enter data once. Never twice.",
   primaryCta: "Get my free 3-day trial",
   secondaryCta: "See what we automate",
   trustPoints: [
     "No technical knowledge needed",
-    "Syncs with QuickBooks, Xero & your CRM",
+    "Syncs with your accounting software & CRM",
     "Built around how you already work",
   ],
 };
@@ -56,7 +56,7 @@ export const hero = {
 export const heroChores = [
   {
     title: "Invoice created & sent",
-    detail: "Emailed to customer with a Stripe payment link",
+    detail: "Emailed to customer with a payment link",
     badge: "Instant",
     icon: "fileText",
   },
@@ -68,7 +68,7 @@ export const heroChores = [
   },
   {
     title: "Synced to accounting",
-    detail: "Posted to QuickBooks and Xero, no manual entry",
+    detail: "Posted to your books, no manual entry",
     badge: "Zero Entry",
     icon: "plug",
   },
@@ -88,9 +88,9 @@ export const businessSegments = [
     subtitle: "CPAs, accountants, bookkeepers & tax practices",
     featured: true,
     points: [
-      "Client document collection via secure portal, email or WhatsApp",
+      "Client document collection via secure portal or email",
       "Tax deadline & filing reminders for every client",
-      "Bank statements & receipts to QuickBooks / Xero entries",
+      "Bank statements & receipts turned into accounting entries",
       "Staff workload tracking & month-end close checklists",
     ],
     cta: "See automations for accounting firms",
@@ -111,7 +111,7 @@ export const businessSegments = [
   {
     id: "ecommerce",
     title: "E-commerce & retail",
-    subtitle: "Shopify, Amazon & multi-channel sellers",
+    subtitle: "Online stores & multi-channel sellers",
     featured: false,
     points: [
       "Orders, inventory & stock synced across channels",
@@ -206,7 +206,7 @@ export const security = [
   {
     icon: "database",
     title: "Stays in your systems",
-    body: "Wherever possible, data stays in your own Google Drive, Microsoft 365 or software, not ours. GDPR-compliant by design, with EU data hosting available.",
+    body: "Wherever possible, data stays in your own cloud storage or software, not ours. GDPR-compliant by design, with EU data hosting available.",
   },
   {
     icon: "lock",
@@ -223,7 +223,7 @@ export const faqs = [
   },
   {
     q: "Do I have to change my software?",
-    a: "No. We connect to what you already use (QuickBooks, Xero, Sage, Exact, DATEV, FreshBooks, HubSpot, Shopify, Google Sheets, Excel and more), so nobody types the same entry twice.",
+    a: "No. We connect to what you already use (your accounting software, CRM, online store, spreadsheets and more), so nobody types the same entry twice.",
   },
   {
     q: "Do you work with businesses outside India?",
@@ -234,8 +234,8 @@ export const faqs = [
     a: "If it's saving you time, we take it live at a clear, fixed price. If it isn't, you walk away and owe nothing.",
   },
   {
-    q: "Do you use AI, Zapier or Make?",
-    a: "We use whatever fits: Zapier, Make, n8n, custom code and AI models for reading documents and emails. You get the result, not a tool you have to manage.",
+    q: "Do you use AI and no-code tools?",
+    a: "We use whatever fits: proven automation platforms, custom code and AI for reading documents and emails. You get the result, not a tool you have to manage.",
   },
   {
     q: "My process is unusual. Can you still automate it?",
@@ -288,7 +288,7 @@ export const pricing = {
 export const caseStudy = {
   isPlaceholder: true,
   firm: "Bookkeeping firm (example)",
-  summary: "Automated client document collection and receipt entry into QuickBooks.",
+  summary: "Automated client document collection and receipt entry into their accounting software.",
   metrics: [
     { value: "30+", label: "Hours saved weekly" },
     { value: "0", label: "Manual entries" },

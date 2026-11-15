@@ -13,7 +13,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 const title = "Minus Zero | Business Process Automation Agency for Small Businesses";
 const description =
-  "Custom workflow automation for accounting firms, agencies, e-commerce and small businesses in the US, UK, Europe, Canada & Australia. QuickBooks, Xero, HubSpot & AI integrations. Free 3-day trial.";
+  "Custom workflow automation for accounting firms, agencies, e-commerce and small businesses in the US, UK, Europe, Canada & Australia. Accounting, CRM & AI integrations. Free 3-day trial.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -25,16 +25,14 @@ export const metadata: Metadata = {
     "automation agency for small business",
     "bookkeeping automation",
     "accounting firm automation",
-    "QuickBooks automation",
-    "Xero integration services",
-    "Zapier expert",
-    "Make.com automation agency",
-    "n8n automation",
+    "accounting software integration",
+    "no-code automation agency",
+    "AI document processing",
     "AI automation agency",
     "CRM automation",
     "automation agency Europe",
     "GDPR compliant automation",
-    "Exact Online automation",
+    "invoice automation",
   ],
   alternates: { canonical: "/" },
   icons: {

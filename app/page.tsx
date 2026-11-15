@@ -27,9 +27,9 @@ const jsonLd = {
       telephone: site.phoneHref.replace("tel:", ""),
       areaServed: [...["US", "GB", "IE", "NL", "DE", "SE", "DK", "CA", "AU", "AE", "IN"].map((c) => ({ "@type": "Country", name: c })), { "@type": "Place", name: "Europe" }],
       serviceType: "Business process automation",
-      knowsAbout: ["Workflow automation", "QuickBooks integration", "Xero integration", "AI document processing", "Zapier", "Make", "n8n", "CRM automation"],
+      knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation"],
       description:
-        "Minus Zero automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to QuickBooks, Xero and their CRM. Enter data once. Never twice.",
+        "Minus Zero automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.",
       sameAs: [site.linkedin, site.github],
     },
     {

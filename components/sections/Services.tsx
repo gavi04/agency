@@ -59,7 +59,7 @@ export default function Services() {
                 </li>
                 <li className="flex items-center gap-2.5 text-xs font-medium text-fg">
                   <Check className="h-3.5 w-3.5 text-coral shrink-0" strokeWidth={3} />
-                  Works with your current tools: QuickBooks, Xero, Sage, HubSpot, Excel
+                  Works with the accounting software and tools you already use
                 </li>
               </ul>
 

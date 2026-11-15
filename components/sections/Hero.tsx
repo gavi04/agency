@@ -1,11 +1,11 @@
 import DashboardMock from "../DashboardMock";
-import { ArrowRight, WhatsApp, ShieldCheck, Zap, Database, Clock } from "../Icons";
+import { ArrowRight, Mail, ShieldCheck, Zap, Database, Clock } from "../Icons";
 import { hero, site } from "@/content/site";
 
 const strip = [
   { icon: Zap, title: "Free 3-day trial", body: "on your real workflow" },
-  { icon: WhatsApp, title: "Works where you work", body: "email, Slack, Teams, WhatsApp" },
-  { icon: Database, title: "Synced to your books", body: "QuickBooks, Xero, Sage" },
+  { icon: Mail, title: "Works where you work", body: "email, chat & your team apps" },
+  { icon: Database, title: "Synced to your books", body: "accounting software & CRM" },
   { icon: Clock, title: "Enter data once", body: "never twice" },
   { icon: ShieldCheck, title: "NDA & GDPR", body: "signed before we start" },
 ];
