@@ -24,11 +24,12 @@ const jsonLd = {
       slogan: site.tagline,
       url: site.url,
       email: site.email,
-      areaServed: [...["US", "GB", "IE", "NL", "DE", "SE", "DK", "CA", "AU", "AE", "IN"].map((c) => ({ "@type": "Country", name: c })), { "@type": "Place", name: "Europe" }],
+      address: { "@type": "PostalAddress", addressCountry: "IN" },
+      areaServed: [...["IN", "US", "GB", "IE", "NL", "DE", "SE", "DK", "CA", "AU", "AE"].map((c) => ({ "@type": "Country", name: c })), { "@type": "Place", name: "Europe" }],
       serviceType: "Business process automation",
-      knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation"],
+      knowsAbout: ["Workflow automation", "Accounting software integration", "AI document processing", "No-code automation", "CRM automation", "GST compliance automation", "CA firm automation", "WhatsApp business automation"],
       description:
-        `${site.name} automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.`,
+        `${site.name} automates repetitive daily chores for accounting firms, agencies, e-commerce stores and small businesses in India and worldwide, connecting them to their accounting software and CRM. Enter data once. Never twice.`,
       sameAs: [site.linkedin, site.github],
     },
     {

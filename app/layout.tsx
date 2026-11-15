@@ -13,7 +13,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 const title = `${site.name} | Business Process Automation Agency for Small Businesses`;
 const description =
-  "Custom workflow automation for accounting firms, agencies, e-commerce and small businesses in the US, UK, Europe, Canada & Australia. Accounting, CRM & AI integrations. Free 3-day trial.";
+  "Custom workflow automation for accounting firms, CA firms, agencies, e-commerce and small businesses in India, the US, UK, Europe, Canada & Australia. Accounting, CRM & AI integrations. Free 3-day trial.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -33,8 +33,21 @@ export const metadata: Metadata = {
     "automation agency Europe",
     "GDPR compliant automation",
     "invoice automation",
+    // India
+    "business automation company in India",
+    "workflow automation services India",
+    "automation agency India",
+    "CA firm automation",
+    "GST reconciliation automation",
+    "accounting automation for CA firms",
+    "WhatsApp automation for business India",
+    "small business automation India",
   ],
-  alternates: { canonical: "/" },
+  // One English page serves every market; hreflang tells Google it is meant for India too
+  alternates: {
+    canonical: "/",
+    languages: { "en-IN": "/", "en-US": "/", "en-GB": "/", "x-default": "/" },
+  },
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
@@ -47,7 +60,7 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "en_US",
-    alternateLocale: ["en_GB", "en_IE", "en_CA", "en_AU"],
+    alternateLocale: ["en_IN", "en_GB", "en_IE", "en_CA", "en_AU"],
   },
   twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },

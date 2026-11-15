@@ -226,8 +226,8 @@ export const faqs = [
     a: "No. We connect to what you already use (your accounting software, CRM, online store, spreadsheets and more), so nobody types the same entry twice.",
   },
   {
-    q: "Do you work with businesses outside India?",
-    a: "Yes. We work remotely with clients across the US, UK, Europe, Canada, Australia and the Middle East. European clients get calls during your working day, GDPR-compliant data handling and a data processing agreement on request.",
+    q: "Which countries do you work with?",
+    a: "We are based in India and work with businesses across India, plus remote clients in the US, UK, Europe, Canada, Australia and the Middle East. Indian clients get GST-ready workflows and support in IST. European clients get calls during your working day, GDPR-compliant data handling and a data processing agreement on request.",
   },
   {
     q: "What happens after the 3-day trial?",
